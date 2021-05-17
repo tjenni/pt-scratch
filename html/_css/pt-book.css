@@ -1,0 +1,59 @@
+div.pt-book {
+  max-width:75ch;
+  margin-left:10%;
+  margin-right:5%;
+  text-align:justify;
+  line-height:150%;
+}
+
+div.pt-book h2 {
+  padding:0pt;
+  margin-top:1em;
+  margin-bottom:1em;
+  color:seagreen;
+  font-weight:bold;
+}
+
+div.pt-book h3 {
+  padding:0pt;
+  margin-top:1em;
+  margin-bottom:1em;
+  color:seagreen;
+  font-weight:bold;
+}
+
+div.pt-book p.caption  {
+  text-align: center;
+  text-emphasis:italic;
+}
+
+div.pt-book .ereignisse  {
+  color:#F5C242;
+}
+
+div.pt-book .bewegung  {
+  color:#5F95F7;
+}
+
+div.pt-book .aussehen {
+  color:#9268F6;
+}
+
+
+div.pt-book .fühlen {
+  color:#71AFD2;
+}
+
+div.pt-book .steuerung {
+  color:#F5C242;
+}
+
+div.pt-book .operatoren {
+  color:#74BE65;
+}
+
+div.pt-book pre.scratch{
+  transform: scale(0.9);
+  margin-top:-2%;
+  margin-bottom:-5%;
+}

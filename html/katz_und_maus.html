@@ -8,9 +8,21 @@
 
 <body>
 
-<div style="max-width:75ch;margin-left:10%;margin-right:5%;text-align:justify;line-height:150%;">
+<div class="pt-book">
 
-<h2 style="padding:0pt;margin-top:1em;margin-bottom:1em;color:seagreen;font-weight:bold;">Katz und Maus</h2>
+<!-- load css file -->
+<script type="text/javascript">
+  var fileref = document.createElement("link");
+  fileref.rel = "stylesheet";
+  fileref.type = "text/css";
+  fileref.href = "_css/pt-book.css";
+  document.getElementsByTagName("head")[0].appendChild(fileref)
+</script>
+
+
+
+
+<h2>Katz und Maus</h2>
 
 <p>
   In diesem Kapitel werden wir zusammen ein kleines Spiel programmieren. Mit Scratch lassen sich kleine Spiele relativ leicht umsetzen.Wenn du nicht alles verstehst, mach dir keine Sorgen. Wir werden in späteren Kapitel alles noch einmal sorgfältig anschauen.
@@ -26,7 +38,8 @@
 
 
 
-<h3 style="padding:0pt;margin-top:1em;margin-bottom:1em;color:seagreen;font-weight:bold;">Die Katze</h3>
+
+<h3>Die Katze</h3>
 
 <p>
 Füge eine neue Katzenfigur (Cat 2) hinzu, siehe Abb. 1. Übernimm für diese Figur den Code von Prog. 1.
@@ -35,12 +48,13 @@ Füge eine neue Katzenfigur (Cat 2) hinzu, siehe Abb. 1. Übernimm für diese Fi
 <p style="text-align:center;">
   <img src="katz_und_maus/cat2.svg" alt="Cat2 Sprite" width="40%" />
 </p>
-<p style="text-align:center;"><i>
-Abb. 1 – Kostüm der Figur "Cat 2".
-</i></p>
+<p class="caption">
+  Abb. 1 – Kostüm der Figur "Cat 2".
+</p>
+
 
 <hr />
-<pre class="scratch" style="transform: scale(0.9);margin-top:-2%;;margin-bottom:-5%;">
+<pre class="scratch">
 Wenn die grüne Flagge angeklickt
 gehe zu x:(0) y:(0)
 zeige dich
@@ -55,58 +69,47 @@ ende
 verstecke dich
 stoppe [alles v]
 </pre>
-
-<p style="text-align: center;"><i>
+<p class="caption">
     Prog. 1 – Programm für die Katze
-</i></p>
+</p>
 <hr />
 
 <p>
-Wir lesen dieses Programm gemeinsam durch. Programme sind wie Kochrezepte. Sie werden von oben nach unten schrittweise ausgeführt.
+  Wir lesen dieses Programm gemeinsam durch. Programme sind wie Kochrezepte. Sie werden von oben nach unten schrittweise ausgeführt.
 </p>
 
 <p>
-Der erste Befehl <b style="color:#F5C242;">Wenn <b style="color:#6DBD63;">grüne Flagge</b> angeklickt wird</b> wird nur dann ausgeführt, wenn man oberhalb der Bühne auf die grüne Flagge klickt.
+  Der erste Befehl <b class="ereignisse">Wenn <b class="operatoren">grüne Flagge</b> angeklickt wird</b> wird nur dann ausgeführt, wenn man oberhalb der Bühne auf die grüne Flagge klickt.
 </p>
 
 <p>
-Mit dem zweiten Befehl <b style="color:#5F95F7;">gehe zu x: 0 y: 0</b> wird die Katze in die Mitte der Bühne verschoben. Anschliessend wird mit <b style="color:#9268F6;">zeige dich</b>, die Katze angezeigt.
+  Mit dem zweiten Befehl <b class="bewegung">gehe zu x: 0 y: 0</b> wird die Katze in die Mitte der Bühne verschoben. Anschliessend wird mit <b class="aussehen">zeige dich</b>, die Katze angezeigt.
 </p>
 
 <p>
-Ein Spiel soll jeweils 20 Sekunden dauern. Mit dem Befehl <b style="color:#71AFD2;">setze Stoppuhr zurück</b>  wird die interne Stoppuhr auf null gesetzt.
+  Ein Spiel soll jeweils 20 Sekunden dauern. Mit dem Befehl <b class="fühlen">setze Stoppuhr zurück</b>  wird die interne Stoppuhr auf null gesetzt.
 </p>
 
 <p>
-Jetzt kommt der Zangenbefehl <b style="color:#F5C242;">wiederhole bis <b style="color:#71AFD2;">Stoppuhr</b> <b style="color:#74BE65;"> > 20 </b> </b>. Das bedeutet, dass alle Befehle in der Zange wiederholt werden, bis 20 Sekunden abgelaufen sind.
+  Jetzt kommt der Zangenbefehl <b class="steuerung">wiederhole bis <b class="fühlen">Stoppuhr</b> <b class="operatoren"> > 20 </b> </b>. Das bedeutet, dass alle Befehle in der Zange wiederholt werden, bis 20 Sekunden abgelaufen sind.
 </p>
 
 <p>
-In der Zange gibt es einen weiteren Zangenbefehl <b style="color:#F5C242;">falls <b style="color:#71AFD2;"> Entfernung von Mauszeiger </b> <b style="color:#74BE65;"> > 5 </b>, dann</b>. Die Befehle innerhalb von diesem Zangenbefehl werden nur dann ausgeführt, wenn die Katz weiter als 5 Schritte vom Mauszeiger entfernt ist. Falls dies der Fall ist, bewegt sich die Katze mit <b style="color:#5F95F7;">gehe 5 er Schritt</b>  vorwärts.
+  In der Zange gibt es einen weiteren Zangenbefehl <b class="steuerung">falls <b class="fühlen"> Entfernung von Mauszeiger </b> <b class="operatoren"> > 5 </b>, dann</b>. Die Befehle innerhalb von diesem Zangenbefehl werden nur dann ausgeführt, wenn die Katz weiter als 5 Schritte vom Mauszeiger entfernt ist. Falls dies der Fall ist, bewegt sich die Katze mit <b class="bewegung">gehe 5 er Schritt</b>  vorwärts.
 </p>
 
 <p>
-Zuletzt wird mit <b style="color:#5F95F7;">drehe dich zu Mauszeiger</b> die Katze immer in Richtung des Mauszeigers ausgerichtet. Da sich alle diese  Befehle in der Zange des <b style="color:#F5C242;">wiederhole bis...</b> Befehls befinden, werden sie immerzu wiederholt. D.h. die Katze wird sich immer auf den Mauszeiger ausrichten und sich in Richtung von diesem bewegen (wenn sie mehr als 5 Schritte von ihm entfernt ist). Du kannst das Programm testen, indem du auf die grüne Flagge klickst.
+  Zuletzt wird mit <b class="bewegung">drehe dich zu Mauszeiger</b> die Katze immer in Richtung des Mauszeigers ausgerichtet. Da sich alle diese  Befehle in der Zange des <b class="steuerung">wiederhole bis...</b> Befehls befinden, werden sie immerzu wiederholt. D.h. die Katze wird sich immer auf den Mauszeiger ausrichten und sich in Richtung von diesem bewegen (wenn sie mehr als 5 Schritte von ihm entfernt ist). Du kannst das Programm testen, indem du auf die grüne Flagge klickst.
 </p>
 
 <p>
-Nach dem <b style="color:#F3AF43;">wiederhole bis ... </b> Befehl , verstecken wir die Katze mit <b style="color:#9268F6;">verstecke dich</b> und beenden das Programm mit <b style="color:#F3AF43;">stoppe [alles]</b>.
+  Nach dem <b  class="steuerung">wiederhole bis ... </b> Befehl , verstecken wir die Katze mit <b class="aussehen">verstecke dich</b> und beenden das Programm mit <b  class="steuerung">stoppe [alles]</b>.
 </p>
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-<h3 style="padding:0pt;margin-top:1em;margin-bottom:1em;color:seagreen;font-weight:bold;">Die Maus</h3>
+<h3>Die Maus</h3>
 
 <p>
 Weiter geht es mit der Maus. Füge die Mausfigur  (Mouse1) hinzu und übernimm für sie den folgenden Code.
@@ -115,13 +118,13 @@ Weiter geht es mit der Maus. Füge die Mausfigur  (Mouse1) hinzu und übernimm f
 <p style="text-align:center;">
   <img src="katz_und_maus/mouse1-a.svg" alt="Mouse1 Sprite" width="40%" />
 </p>
-
-
-
+<p class="caption">
+  Abb. 2 – Kostüm der Figur "Mouse1".
+</p>
 
 
 <hr />
-<pre class="scratch" style="transform: scale(0.9);margin-top:-2%;;margin-bottom:-5%;">
+<pre class="scratch">
 Wenn die grüne Flagge angeklickt
 setze [Punkte v] auf (0)
 verstecke dich
@@ -136,37 +139,39 @@ wiederhole fortlaufend
   warte (Zufallszahl von (0) bis (2)) Sekunden
 ende
 </pre>
-
-<p style="text-align: center;"><i>
+<p class="caption">
     Prog. 2 – Programm für die Maus
-</i></p>
+</p>
 <hr />
 
 </div>
 
 
-<!-- https://github.com/scratchblocks/scratchblocks -->
+
+<!--
+  Lade scratch block renderer
+  https://github.com/scratchblocks/scratchblocks
+-->
 <script src="_js/scratchblocks-v3.4-min.js"></script>
 <script src="_js/de.js"></script>
 
 <script>
-
 scratchblocks.loadLanguages({
   de : de
 });
 
-  scratchblocks.renderMatching('pre.scratch', {
-    style:     'scratch3',
-    languages: ['de']
-  });
+scratchblocks.renderMatching('pre.scratch', {
+  style:     'scratch3',
+  languages: ['de']
+});
 
-  scratchblocks.renderMatching("code.scratch", {
+scratchblocks.renderMatching("code.scratch", {
   inline: true,
   style:     'scratch3',
   languages: ['de']
 });
 
-  </script>
+</script>
 
-  </body>
-  </html>
+</body>
+</html>
