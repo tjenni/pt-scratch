@@ -27,6 +27,17 @@ div.pt-book p.caption  {
   text-emphasis:italic;
 }
 
+div.pt-book p.image{
+  text-align:center;
+}
+
+div.pt-book p.footer{
+  text-align:center;
+}
+
+
+
+
 div.pt-book .ereignisse  {
   color:#F5C242;
 }
