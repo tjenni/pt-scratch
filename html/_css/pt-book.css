@@ -63,6 +63,10 @@ div.pt-book .operatoren {
   color:#74BE65;
 }
 
+div.pt-book .variablen {
+  color:#F0923C;
+}
+
 div.pt-book pre.scratch{
   transform: scale(0.9);
   margin-top:-2%;

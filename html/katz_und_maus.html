@@ -25,15 +25,15 @@
 <h2>Katz und Maus</h2>
 
 <p>
-  In diesem Kapitel werden wir zusammen ein kleines Spiel programmieren. Mit Scratch lassen sich kleine Spiele relativ leicht umsetzen.Wenn du nicht alles verstehst, mach dir keine Sorgen. Wir werden in späteren Kapitel alles noch einmal sorgfältig anschauen.
+  Mit Scratch kann man relativ leicht kleine Spiele erstellen. Wir werden nun zusammen ein Katz und Mausspiel programmieren. Wenn du jetzt nicht alles verstehst, mach dir keine Sorgen. Wir werden in späteren Kapitel alles noch einmal sorgfältig anschauen.
 </p>
 
 <p>
-  Wir werden ein Katz- und Mausspiel programmieren. Der Spieler steuert mit der Maus eine Katze, die Mäuse fangen soll. Ein Spiel dauert jeweils 20 Sekunden und es werden die Anzahl der gefangen Mäuse gezählt.
+  Bei dem Spiel steuert der Spieler eine Katze . Die Katze muss in 20 Sekunden versuchen so viele Mäuse wie möglich zu fangen.
 </p>
 
 <p>
-  Gehe auf <a href="https://scratch.mit.edu/projects/editor" target="_blank">Scratch</a> und erstelle ein neues Projekt. Klicke unten rechts bei Bühne auf das <em>Bühnenbild 1</em> und zeichne ein grosses grünes Rechteck. Die Bühne sieht nun aus wie ein grünes Rasenstück auf welchem dann die Katze die Mäuse fängt.
+  Zum Start, surfe auf die Seite <a href="https://scratch.mit.edu/projects/editor" target="_blank">scratch.mit.edu</a> und erstelle ein neues Projekt. Klicke unten rechts bei <em>Bühne</em> auf das <em>Bühnenbild 1</em> und zeichne ein grosses grünes Rechteck. Die Bühne sieht nun aus wie ein grünes Rasenstück auf welchem dann die Katze die Mäuse fängt.
 </p>
 
 
@@ -42,7 +42,7 @@
 <h3>Die Katze</h3>
 
 <p>
-Füge eine neue Katzenfigur (Cat 2) hinzu, siehe Abb. 1. Übernimm für diese Figur den Code von Prog. 1.
+Füge eine Katzenfigur (Cat 2) hinzu, siehe Abb. 1. Übernimm für diese Figur den Code von Prog. 1.
 </p>
 
 <p class="image">
@@ -53,7 +53,6 @@ Füge eine neue Katzenfigur (Cat 2) hinzu, siehe Abb. 1. Übernimm für diese Fi
 </p>
 
 
-<hr />
 <pre class="scratch">
 Wenn die grüne Flagge angeklickt
 gehe zu x:(0) y:(0)
@@ -72,7 +71,6 @@ stoppe [alles v]
 <p class="caption">
     Prog. 1 – Programm für die Katze
 </p>
-<hr />
 
 <p>
   Wir lesen dieses Programm gemeinsam durch. Programme sind wie Kochrezepte. Sie werden von oben nach unten schrittweise ausgeführt.
@@ -83,27 +81,27 @@ stoppe [alles v]
 </p>
 
 <p>
-  Mit dem zweiten Befehl <b class="bewegung">gehe zu x: 0 y: 0</b> wird die Katze in die Mitte der Bühne verschoben. Anschliessend wird mit <b class="aussehen">zeige dich</b>, die Katze angezeigt.
+  Mit dem zweiten Befehl <b class="bewegung">gehe zu x: 0 y: 0</b> wird die Katze in die Mitte der Bühne verschoben. Die Mitte der Bühne hat die Koordinaten (0,0). Anschliessend wird mit <b class="aussehen">zeige dich</b>, die Katze angezeigt.
 </p>
 
 <p>
-  Ein Spiel soll jeweils 20 Sekunden dauern. Mit dem Befehl <b class="fühlen">setze Stoppuhr zurück</b>  wird die interne Stoppuhr auf null gesetzt.
+  Ein Spiel soll jeweils 20 Sekunden dauern. Mit dem Befehl <b class="fühlen">setze Stoppuhr zurück</b>  wird die interne Stoppuhr auf null gesetzt. Die Stoppuhr zählt automatisch die Sekunden die verstreichen.
 </p>
 
 <p>
-  Jetzt kommt der Zangenbefehl <b class="steuerung">wiederhole bis <b class="fühlen">Stoppuhr</b> <b class="operatoren"> > 20 </b> </b>. Das bedeutet, dass alle Befehle in der Zange wiederholt werden, bis 20 Sekunden abgelaufen sind.
+  Jetzt kommt der Zangenbefehl <b class="steuerung">wiederhole bis <b class="fühlen">Stoppuhr</b> <b class="operatoren"> > 20 </b> </b>. Das bedeutet, dass alle Befehle in der Zange wiederholt werden, bis die Stoppuhr mehr als 20 Sekunden anzeigt. D.h. das Spiel ist in seiner Dauer auf 20 Sekunden begrenzt.
 </p>
 
 <p>
-  In der Zange gibt es einen weiteren Zangenbefehl <b class="steuerung">falls <b class="fühlen"> Entfernung von Mauszeiger </b> <b class="operatoren"> > 5 </b>, dann</b>. Die Befehle innerhalb von diesem Zangenbefehl werden nur dann ausgeführt, wenn die Katz weiter als 5 Schritte vom Mauszeiger entfernt ist. Falls dies der Fall ist, bewegt sich die Katze mit <b class="bewegung">gehe 5 er Schritt</b>  vorwärts.
+  In der Wiederholen-Zange gibt es einen weiteren Zangenbefehl <b class="steuerung">falls <b class="fühlen"> Entfernung von Mauszeiger </b> <b class="operatoren"> > 5 </b>, dann</b>. Die Befehle innerhalb von diesem Zangenbefehl werden nur dann ausgeführt, wenn die Katz weiter als 5 Schritte vom Mauszeiger entfernt ist. Falls dies der Fall ist, bewegt sich die Katze mit <b class="bewegung">gehe 5 er Schritt</b>  vorwärts.
 </p>
 
 <p>
-  Zuletzt wird mit <b class="bewegung">drehe dich zu Mauszeiger</b> die Katze immer in Richtung des Mauszeigers ausgerichtet. Da sich alle diese  Befehle in der Zange des <b class="steuerung">wiederhole bis...</b> Befehls befinden, werden sie immerzu wiederholt. D.h. die Katze wird sich immer auf den Mauszeiger ausrichten und sich in Richtung von diesem bewegen (wenn sie mehr als 5 Schritte von ihm entfernt ist). Du kannst das Programm testen, indem du auf die grüne Flagge klickst.
+  Zuletzt wird mit <b class="bewegung">drehe dich zu Mauszeiger</b> die Katze immer in Richtung des Mauszeigers ausgerichtet. Da sich alle diese  Befehle in der <b class="steuerung">wiederhole bis...</b>-Zange befinden, werden sie immerzu wiederholt. D.h. die Katze wird sich immerzu auf den Mauszeiger ausrichten und wenn sie mehr als 5 Schritte entfernt ist, sich in dessen Richtung bewegen. Du kannst das Programm testen, indem du auf die grüne Flagge klickst.
 </p>
 
 <p>
-  Nach dem <b  class="steuerung">wiederhole bis ... </b> Befehl , verstecken wir die Katze mit <b class="aussehen">verstecke dich</b> und beenden das Programm mit <b  class="steuerung">stoppe [alles]</b>.
+  Nach dem <b  class="steuerung">wiederhole bis ... </b>-Befehl, räumen wir etwas auf. Zuerst wird die Katze mit <b class="aussehen">verstecke dich</b> ausgeblendet und dann das Programm mit <b  class="steuerung">stoppe [alles]</b> beendet.
 </p>
 
 
@@ -123,7 +121,6 @@ Weiter geht es mit der Maus. Füge die Mausfigur  (Mouse1) hinzu und übernimm f
 </p>
 
 
-<hr />
 <pre class="scratch">
 Wenn die grüne Flagge angeklickt
 setze [Punkte v] auf (0)
@@ -135,15 +132,34 @@ wiederhole fortlaufend
   warte bis < wird [Katze v] berührt? >
   verstecke dich
   ändere [Punkte v] um (1)
-  spiele Klang [Plopp v] ganz
+  spiele Klang [Bite v] ganz
   warte (Zufallszahl von (0) bis (2)) Sekunden
 ende
 </pre>
 <p class="caption">
     Prog. 2 – Programm für die Maus
 </p>
-<hr />
 
+
+<p>
+  Das Mausprogramm lesen wir ebenfalls gemeinsam durch. Der erste Befehl lautet wie bei der Katze <b class="ereignisse">Wenn <b class="operatoren">grüne Flagge</b> angeklickt wird</b>. Der zweite Befehl erstellt setzt die Variable <b class="variablen">Punkte</b> auf 0. Eine Variable  kann man sich wie ein Notizzettel vorstellen auf den man eine einzige Zahl notieren kann. Der Name der Variable verrät ihren Zweck. Es handelt sich um den Punktestand, welcher der Spieler während des Spiels hat.
+</p>
+
+<p>
+  Jetzt wird die Maus mit dem Befehl <b class="aussehen">verstecke dich</b> versteckt. Als nächstes kommt der Zangenbefehl <b  class="steuerung">wiederhole fortlaufend</b>. Alle Befehle in dieser Zange werden immerzu wiederholt.
+</p>
+
+<p>
+  Wir setzen die noch unsichtbare Maus an eine Zufallsposition und geben ihr eine Zufallsrichtung. Dann lassen wir die Maus mit <b class="aussehen">zeige dich</b> erscheinen.
+</p>
+
+<p>
+  Das Mausprogramm wird anschliessend gestoppt, bis die Maus die Katze berührt. Falls das der Fall ist, verstecken wir die Maus, erhöhen den Punktestand um 1 und spielen den Ton "Bite" ab.
+</p>
+
+<p>
+  Das Mausprogramm wartet dann eine zufällige Anzahl von Sekunden. Es beginnt wieder von vorne. Die Maus erscheint an einer zufälligen Position und wartet, bis die Katze sie berührt.
+</p>
 
 
 <hr class="footer">
