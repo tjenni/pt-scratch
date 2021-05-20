@@ -25,15 +25,23 @@
 <h2>Katz und Maus</h2>
 
 <p>
-  Mit Scratch kann man relativ leicht kleine Spiele erstellen. Wir werden nun zusammen ein Katz und Mausspiel programmieren. Wenn du jetzt nicht alles verstehst, mach dir keine Sorgen. Wir werden in späteren Kapitel alles noch einmal sorgfältig anschauen.
+  Mit Scratch kann man ohne viel Aufwand kleine Spiele erstellen. Wir werden jetzt zusammen ein Katz- und Mausspiel programmieren. Wenn du nicht alles auf Anhieb verstehst, mach dir keine Sorgen. In späteren Kapiteln wird alles noch einmal genau erklärt.
 </p>
 
 <p>
-  Bei dem Spiel steuert der Spieler eine Katze . Die Katze muss in 20 Sekunden versuchen so viele Mäuse wie möglich zu fangen.
+  Beim Katz- und Mausspiel steuert der Spieler eine Katze. Die Katze muss in 20 Sekunden versuchen so viele Mäuse wie möglich zu fangen.
 </p>
 
 <p>
-  Zum Start, surfe auf die Seite <a href="https://scratch.mit.edu/projects/editor" target="_blank">scratch.mit.edu</a> und erstelle ein neues Projekt. Klicke unten rechts bei <em>Bühne</em> auf das <em>Bühnenbild 1</em> und zeichne ein grosses grünes Rechteck. Die Bühne sieht nun aus wie ein grünes Rasenstück auf welchem dann die Katze die Mäuse fängt.
+  Erstelle auf <a href="https://scratch.mit.edu/projects/editor" target="_blank">scratch.mit.edu</a> neues Projekt. Klicke unten rechts bei <em>Bühne</em> auf das <em>Bühnenbild 1</em> und zeichne ein grosses grünes Rechteck, siehe Video 1. Die Bühne sieht nun aus wie ein Stück Rasen auf welchem dann die Katze die Mäuse fängt.
+</p>
+
+<!-- Grösse Chromefenster 1060 x 730 -->
+<p class="video">
+    <video width="800" controls="true"><source src="katz_und_maus/gruener_hintergrund720.mov">katz_und_maus/gruener_hintergrund720.mov</video>
+</p>
+<p class="caption">
+    Video 1 – Grüner Hintergrund zeichen  (Video: T. Jenni)
 </p>
 
 
@@ -42,7 +50,7 @@
 <h3>Die Katze</h3>
 
 <p>
-Füge eine Katzenfigur (Cat 2) hinzu, siehe Abb. 1. Übernimm für diese Figur den Code von Prog. 1.
+Füge eine Katzenfigur (Cat 2) hinzu, siehe Abb. 1. Setze die Grösse der Figur auf 50 %, siehe Video 1. Übernimm dann für die Katze den Code von Prog. 1.
 </p>
 
 <p class="image">
@@ -73,7 +81,7 @@ stoppe [alles v]
 </p>
 
 <p>
-  Wir lesen dieses Programm gemeinsam durch. Programme sind wie Kochrezepte. Sie werden von oben nach unten schrittweise ausgeführt.
+  Wir lesen dieses Programm gemeinsam durch und versuchen es zu verstehen.  Programme sind wie Kochrezepte. Sie werden von oben nach unten schrittweise ausgeführt.
 </p>
 
 <p>
@@ -110,7 +118,7 @@ stoppe [alles v]
 <h3>Die Maus</h3>
 
 <p>
-Weiter geht es mit der Maus. Füge die Mausfigur  (Mouse1) hinzu und übernimm für sie den folgenden Code.
+Weiter geht es mit der Maus. Füge die Mausfigur (Mouse1) hinzu und setze ihre Grösse auch auf 50 %. Übernimm anschliessend für sie den Code von Prog. 2.
 </p>
 
 <p class="image">
@@ -118,6 +126,18 @@ Weiter geht es mit der Maus. Füge die Mausfigur  (Mouse1) hinzu und übernimm f
 </p>
 <p class="caption">
   Abb. 2 – Kostüm der Figur "Mouse1".
+</p>
+
+<p>
+Der Befehl <b class="variablen">setze Punkte auf 0</b> bezieht sich auf eine Variable. Eine Variable kann man sich wie ein Notizzettel vorstellen auf den man eine einzige Zahl notieren kann. Der Name der Variable verrät ihren Zweck. Es handelt sich um den Punktestand, welcher der Spieler während des Spiels hat.
+</p>
+
+<!-- Grösse Chromefenster 1060 x 730 -->
+<p class="video">
+    <video width="800" controls="true"><source src="katz_und_maus/variable_erstellen720.mov">katz_und_maus/variable_erstellen720.mov</video>
+</p>
+<p class="caption">
+    Video 2 – Variable erstellen  (Video: T. Jenni)
 </p>
 
 
@@ -142,7 +162,7 @@ ende
 
 
 <p>
-  Das Mausprogramm lesen wir ebenfalls gemeinsam durch. Der erste Befehl lautet wie bei der Katze <b class="ereignisse">Wenn <b class="operatoren">grüne Flagge</b> angeklickt wird</b>. Der zweite Befehl erstellt setzt die Variable <b class="variablen">Punkte</b> auf 0. Eine Variable  kann man sich wie ein Notizzettel vorstellen auf den man eine einzige Zahl notieren kann. Der Name der Variable verrät ihren Zweck. Es handelt sich um den Punktestand, welcher der Spieler während des Spiels hat.
+  Das Mausprogramm lesen wir ebenfalls gemeinsam durch. Der erste Befehl lautet wie bei der Katze <b class="ereignisse">Wenn <b class="operatoren">grüne Flagge</b> angeklickt wird</b>. Der zweite Befehl erstellt setzt die Variable <b class="variablen">Punkte</b> auf 0.
 </p>
 
 <p>
@@ -154,11 +174,11 @@ ende
 </p>
 
 <p>
-  Das Mausprogramm wird anschliessend gestoppt, bis die Maus die Katze berührt. Falls das der Fall ist, verstecken wir die Maus, erhöhen den Punktestand um 1 und spielen den Ton "Bite" ab.
+  Das Mausprogramm wird anschliessend pausiert, bis die Maus von der Katze berührt wird. Falls das der Fall ist, wird die Maus von der Katze gefangen. Die Maus wird versteckt und der Punktestand um 1 erhöht. Dazu erklingt der Ton "Bite". Guten Appetit!
 </p>
 
 <p>
-  Das Mausprogramm wartet dann eine zufällige Anzahl von Sekunden. Es beginnt wieder von vorne. Die Maus erscheint an einer zufälligen Position und wartet, bis die Katze sie berührt.
+  Das Mausprogramm pausiert dann eine zufällige Anzahl von Sekunden bevor wieder die Maus wieder erscheint.
 </p>
 
 
