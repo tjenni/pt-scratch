@@ -31,6 +31,10 @@ div.pt-book p.image{
   text-align:center;
 }
 
+div.pt-book p.program{
+  text-align:center;
+}
+
 div.pt-book p.footer{
   text-align:center;
 }
@@ -67,8 +71,20 @@ div.pt-book .variablen {
   color:#F0923C;
 }
 
-div.pt-book pre.scratch{
+div.pt-book pre.scratch {
   transform: scale(0.9);
   margin-top:-2%;
   margin-bottom:-5%;
+  text-align:center;
+}
+
+div.pt-book code.scratch {
+  display:inline;
+  text-align:left;
+}
+
+div.pt-book code.scratch svg{
+  transform: scale(0.8);
+  margin-top:-5%;
+  margin-bottom:-20%;
 }

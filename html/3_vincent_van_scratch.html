@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+  <meta charset="utf-8"/>
+  <title>Vincent van Scratch</title>
+</head>
+
+<body>
+
+<div class="pt-book">
+
+<!-- load css file -->
+<script type="text/javascript">
+  var fileref = document.createElement("link");
+  fileref.rel = "stylesheet";
+  fileref.type = "text/css";
+  fileref.href = "_css/pt-book.css";
+  document.getElementsByTagName("head")[0].appendChild(fileref)
+</script>
+
+
+
+
+<h2>Vincent van Scratch</h2>
+
+<p>
+  Mit Scratch kannst du kleine Kunstwerke malen. Die Malstifte sind etwas versteckt. Klicke unten links auf <em>Erweiterung hinzufügen</em> und dann auf Malstift.
+</p>
+
+<table align="center" cellspacing="10" cellpadding="0">
+<tr>
+  <td><code class="scratch">lösche alles</code></td>
+  <td style="vertical-align:top;">
+      Mit diesem Befehl werden alle Malstriche gelöscht.
+  </td>
+</tr>
+<tr>
+  <td><code class="scratch">schalte Stift ein</code></td>
+  <td style="vertical-align:top;">
+    Der Malstift wird eingeschaltet. Sobald sich die Figur bewegt, wird sie einen Strich zeichnen.
+  </td>
+</tr>
+<tr>
+  <td><code class="scratch">schalte Stift aus</code></td>
+  <td style="vertical-align:top;">
+    Der Malstift wird ausgeschaltet. Wenn sich die Figur bewegt, wird kein Strich mehr gezeichnet.
+  </td>
+</tr>
+</table>
+
+
+<h2>Das blaue Quadrat</h2>
+
+<p>
+  Wir wollen nun zusammen ein Quadrat auf die Bühne zeichnen. Erstelle ein neues Scratchprojekt und übernimm den Code von Prog. 1. Damit die Figur nicht die gemalten Striche überdeckt, verkleinert man sie am besten auf 50%.
+</p>
+
+<pre class="scratch">
+Wenn die grüne Flagge angeklickt
+gehe zu x:(-100) y:(-100)
+setze Richtung auf (90) Grad
+lösche alles
+schalte Stift ein
+wiederhole (4) mal
+  gehe (200) er Schritt
+  drehe dich nach rechts um (90) Grad
+ende
+</pre>
+<p class="caption">
+    Prog. 1 – Die Katze zeichnet ein Quadrat.
+</p>
+
+<h4>
+  Aufgaben
+</h4>
+
+<ul>
+  <li>
+    Ändere das Programm so, dass das Quadrat im rechten, linken, oberen und unteren Teil der Bühne erscheint.
+  </li>
+  <li>
+    Kannst du das Quadrat verkleinern und vergrössern?
+  </li>
+  <li>
+    Schaffst du es, dass Quadrat etwas zu drehen?
+  </li>
+</ul>
+
+
+<p>
+  Betrachten wir einige Befehle, mit denen du die Katze bewegen kannst.
+</p>
+
+
+<table align="left" cellspacing="10" cellpadding="0" border="0">
+<tr>
+  <td><code class="scratch">gehe zu x:(0) y:(0)</code></td>
+  <td style="vertical-align:top;">
+      Mit diesem Befehl setzt du die Figur auf die Position (x,y) auf der Bühne setzen.
+  </td>
+</tr>
+<tr>
+  <td><code class="scratch">setze Richtung auf (0) Grad</code></td>
+  <td style="vertical-align:top;">
+    Mit diesem Befehl kannst du die Figur drehen.
+  </td>
+</tr>
+<tr>
+  <td><code class="scratch">gehe (10) er Schritt</code></td>
+  <td style="vertical-align:top;">
+    Die Figur schreitet eine bestimmte Anzahl von Schritten in die Richtung in die sie schaut.
+  </td>
+</tr>
+</table>
+
+
+
+<hr class="footer">
+
+<p>
+  Autoren:  T. Jenni<br />
+  Letzte Änderung: 14. Mai 2021
+</p>
+
+<p class="license">
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+          <img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+</p>
+
+<p>
+   <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title" style="font-style: italic;">Einsteigerkurs für den BBC micro:bit</span> von <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/tjenni/microbit" property="cc:attributionName" rel="cc:attributionURL">T. Jenni, et al.</a> ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.
+</p>
+
+</div>
+
+
+
+<!--
+  Lade scratch block renderer
+  https://github.com/scratchblocks/scratchblocks
+-->
+<script src="_js/scratchblocks-v3.4-min.js"></script>
+<script src="_js/de.js"></script>
+
+<script>
+scratchblocks.loadLanguages({
+  de : de
+});
+
+scratchblocks.renderMatching('pre.scratch', {
+  style:     'scratch3',
+  languages: ['de']
+});
+
+scratchblocks.renderMatching("code.scratch", {
+  inline: true,
+  style:     'scratch3',
+  languages: ['de']
+});
+
+</script>
+
+</body>
+</html>
