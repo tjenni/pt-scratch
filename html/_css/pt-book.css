@@ -88,3 +88,31 @@ div.pt-book code.scratch svg{
   margin-top:-5%;
   margin-bottom:-20%;
 }
+
+
+
+
+div.pt-book {
+  counter-reset: question;
+}
+
+
+div.pt-book .question {
+    counter-reset: subquestion;
+}
+div.pt-book .question > span.nr:before {
+    content: counter(question);
+    counter-increment: question;
+}
+
+
+div.pt-book ol.subquestion {
+
+}
+div.pt-book ol.subquestion > li {
+    list-style: none;
+}
+div.pt-book ol.subquestion > li:before {
+    content: counter(subquestion, lower-alpha) ") ";
+    counter-increment: subquestion;
+}
