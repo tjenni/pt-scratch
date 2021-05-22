@@ -61,8 +61,10 @@ div.pt-book p.footer img{
 }
 
 
-div.pt-book table td.hline {
+div.pt-book td.hline {
   border-bottom:1pt solid gray;
+  padding-top:0;
+  padding-bottom:0;
 }
 
 div.pt-book  .seperator {
@@ -129,9 +131,10 @@ div.pt-book code.scratch {
 
 div.pt-book code.scratch svg{
   transform: scale(0.8);
-  margin-top:-5%;
-  margin-bottom:-20%;
-  margin-left:-10%;
+  margin-top:0%;
+  margin-bottom:-10%;
+  margin-left:-5%;
+  padding:0;
 }
 
 
