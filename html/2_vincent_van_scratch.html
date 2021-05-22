@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+  <meta charset="utf-8"/>
+  <title>Vincent van Scratch</title>
+</head>
+
+<body>
+
+<div class="pt-book">
+
+<!-- load css file -->
+<script type="text/javascript">
+  var fileref = document.createElement("link");
+  fileref.rel = "stylesheet";
+  fileref.type = "text/css";
+  fileref.href = "_css/pt-book.css";
+  document.getElementsByTagName("head")[0].appendChild(fileref)
+</script>
+
+
+<h1>
+Vincent van Scratch <span style="margin-left:1em;font-size:200%;">👩🏻‍🎨 🧑🏼‍🎨</span>
+</h1>
+
+<p>
+  Mit Scratch kannst ein bekannter Künstler oder eine bekannte Künstlerin werden 😉. Damit du etwas zeichnen kannst, benötigst du Malstifte. Klicke unten links auf <em>Erweiterung hinzufügen</em> und dann auf <em>Malstift</em>, siehe Video 1.
+</p>
+
+
+<!-- Grösse Chromefenster 1060 x 730 -->
+<p class="video">
+    <video width="800" controls="true"><source src="vincent_van_scratch/erweiterung_malstifte720.mov">vincent_van_scratch/erweiterung_malstifte720.mov</video>
+</p>
+<p class="caption">
+    Video 1 – Erweiterung &laquo;Malstift&raquo; hinzufügen.  (Video: T. Jenni)
+</p>
+
+
+<p>
+  Die vier grundlegenden Befehle zur Steuerung des Malstiftes sind in Tab 1. erklärt. Die Befehle sind weitgehend selbsterklärend. Man kann mit ihnen die Bühne löschen, den Stift ein- oder ausschalten oder die Stiftfarbe wählen.
+</p>
+
+
+<table align="center" cellspacing="10" cellpadding="0">
+<tr class="hline">
+  <td><code class="scratch">lösche alles</code></td>
+  <td style="vertical-align:top;">
+      Mit diesem Befehl werden alle Malstriche gelöscht.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">schalte Stift ein</code></td>
+  <td style="vertical-align:top;">
+    Der Malstift wird eingeschaltet. Sobald die Figur sich bewegt, wird sie einen Strich zeichnen.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">schalte Stift aus</code></td>
+  <td style="vertical-align:top;">
+    Der Malstift wird ausgeschaltet. Wenn sich die Figur bewegt, wird kein Strich mehr gezeichnet.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">setze Stiftfarbe auf (#FF0000)</code></td>
+  <td style="vertical-align:top;">
+    Mit diesem Befehl kannst du die Farbe des Stiftest einstellen.
+  </td>
+</tr>
+</table>
+
+<p class="caption">
+  Tab. 1 – Vier grundlegende Zeichnungsbefehle.
+</p>
+
+
+
+<hr class="seperator" />
+
+<h2>Das rote Quadrat</h2>
+
+<p>
+  Wir werden nun zusammen ein Quadrat zeichnen. Übernimm dazu den Code von Prog. 1. Damit die Figur nicht die gemalten Striche überdeckt, verkleinere sie auf 50%.
+</p>
+
+<pre class="scratch">
+Wenn die grüne Flagge angeklickt
+gehe zu x:(-100) y:(100)
+setze Richtung auf (90) Grad
+lösche alles
+setze Stiftfarbe auf (#FF0000)
+schalte Stift ein
+gehe (200) er Schritt
+</pre>
+<p class="caption">
+    Prog. 1 – Die Katze zeichnet ein Quadrat.
+</p>
+
+<p>
+  Wenn du das Programm ausführst, sollte die Katze nach oben links springen und eine horizontale rote Linie zeichnen. Wir werden jetzt einige wichtige Bewegungsbefehle kennenlernen, siehe Tab 2.
+</p>
+
+<table align="left" cellspacing="10" cellpadding="0" border="0">
+<tr>
+  <td><code class="scratch">gehe zu x:(0) y:(0)</code></td>
+  <td style="vertical-align:top;">
+      Mit diesem Befehl setzt du die Figur auf der Bühne an einen bestimmten Ort setzen.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">setze Richtung auf (0) Grad</code></td>
+  <td style="vertical-align:top;">
+    Mit diesem Befehl kannst du die Figur auf einen bestimmten Winkel drehen.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">gehe (10) er Schritt</code></td>
+  <td style="vertical-align:top;">
+    Die Figur bewegt sich in die Richtung vorwärts, in welche sie gerade schaut.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">drehe dich nach rechts um (45) Grad</code></td>
+  <td style="vertical-align:top;">
+    Die Figur wird im Uhrzeigersinn gedreht.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">drehe dich nach links um (45) Grad</code></td>
+  <td style="vertical-align:top;">
+    Die Figur wird im Gegenuhrzeigersinn gedreht.
+  </td>
+</tr>
+</table>
+
+<p class="caption">
+  Tab. 2 – Grundlegende Befehle um eine Figure auf der Bühne zu bewegen.
+</p>
+
+
+<p>
+  Um jetzt das rote Quadrat zu zeichnen, ersetzen wir in Prog. 1. den letzten Befehl <b class="bewegung">gehe (200) er Schritt</b> durch den folgenden Code, siehe Progr. 2.
+</p>
+
+
+<pre class="scratch">
+wiederhole (4) mal
+  gehe (200) er Schritt
+  warte (1) Sekunden
+  drehe dich nach rechts um (45) Grad
+  warte (1) Sekunden
+ende
+</pre>
+<p class="caption">
+    Prog. 2 – Zeichne ein Quadrat.
+</p>
+
+
+<p>
+  Falls es bei dir nicht funktioniert, klicke <a href="https://scratch.mit.edu/projects/534504435" target="_blank">hier</a> um die Lösung anzuschauen.<br />
+  Die Befehle <b class="steuerung">warte (1) Sekunden</b> helfen dir zu verstehen, wie das Programm funktioniert. Wenn du das Programm ausführst, kannst du die einzelnen Schritte genau mitverfolgen. Scratch zeichnet vom Startpunkt aus eine horizontale Linie, dreht sich dann um 90° im Uhrzeigersinn. Dann wieder holt er diese Schritte viermal. Am Schluss ist ein rotes Quadrat zu sehen.
+</p>
+
+
+<p class="image">
+  <iframe src="https://scratch.mit.edu/projects/534504435/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+  <!--<img src="vincent_van_scratch/buehne_rotes_quadrat.png" alt="" width="80%" />-->
+</p>
+<p class="caption">
+  Abb. 1 – Das rote Quadrat.
+</p>
+
+
+<p>
+  Bis jetzt haben wir noch nicht erklärt, was die Koordinaten (x,y) der Bühne genau bedeuten und welche Werte sie annehmen können. Auch die Richtung in Grad ist noch unklar. Versuche trotzdem die folgenden Aufgaben zu lösen.  Gehe dazu von dem Programm vom roten Quadrat aus.
+</p>
+
+
+<h3 class="question">
+Aufgabe <span class="nr"></span>
+</h3>
+<ol class="subquestion">
+  <li>
+    Verändere die Farbe des Quadrates mal auf grün , blau, weiss und schwarz.
+  </li>
+  <li>
+    Verkleiner und vergrössere das Quadrat.
+  </li>
+  <li>
+    Drehe das Quadrat ein wenig. Vermutlich hast du schon ein Gefühl dafür, wie man eine Figur auf der Bühne platzieren kann und wie man sie ausrichten muss. Im folgenden werden wir jedoch das Koordinatensystem der Bühne noch etwas genauer anschauen.
+  </li>
+</ol>
+
+
+
+
+<hr class="seperator" />
+
+<h2>Orientierung auf der Bühne</h2>
+
+<p>
+  Vermutlich hast du schon ein Gefühl dafür, wie man eine Figur auf der Bühne platzieren kann und wie man sie ausrichten muss. Im folgenden werden wir jedoch das Koordinatensystem der Bühne noch etwas genauer anschauen.
+</p>
+
+
+
+
+
+<h3 class="question">
+Aufgabe <span class="nr"></span>
+</h3>
+<p>
+  Zeichne die folgenden Figuren auf die Bühne. Versuche sie so gut wie möglich in die Mitte zu platzieren.
+</p>
+<ol class="subquestion">
+  <li>
+    <img src="vincent_van_scratch/zick_zack.svg" alt="" width="80%" style="vertical-align:top;"  />
+  </li>
+  <li>
+    <img src="vincent_van_scratch/stern.svg" alt="" width="80%"  style="vertical-align:top;" />
+  </li>
+  <li>
+    <img src="vincent_van_scratch/maeander.svg" alt="" width="80%"  style="vertical-align:top;" />
+  </li>
+</ol>
+
+
+
+<hr class="footer">
+
+<p class="footer">
+  Autoren:  T. Jenni<br />
+  Letzte Änderung: 21. Mai 2021
+</p>
+
+<p class="license">
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+          <img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+</p>
+
+<p>
+   <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title" style="font-style: italic;">Einsteigerkurs für den BBC micro:bit</span> von <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/tjenni/microbit" property="cc:attributionName" rel="cc:attributionURL">T. Jenni, et al.</a> ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.
+</p>
+
+</div>
+
+
+
+<!--
+  Lade scratch block renderer
+  https://github.com/scratchblocks/scratchblocks
+-->
+<script src="_js/scratchblocks-v3.4-min.js"></script>
+<script src="_js/de.js"></script>
+
+<script>
+scratchblocks.loadLanguages({
+  de : de
+});
+
+scratchblocks.renderMatching('pre.scratch', {
+  style:     'scratch3',
+  languages: ['de']
+});
+
+scratchblocks.renderMatching("code.scratch", {
+  inline: true,
+  style:     'scratch3',
+  languages: ['de']
+});
+
+</script>
+
+</body>
+</html>

@@ -6,19 +6,28 @@ div.pt-book {
   line-height:150%;
 }
 
+div.pt-book h1 {
+  padding:0pt;
+  margin-top:3em;
+  margin-bottom:2em;
+  color:#5F95F7;
+  font-weight:bold;
+}
+
 div.pt-book h2 {
   padding:0pt;
-  margin-top:1em;
+  margin-top:3em;
   margin-bottom:1em;
-  color:seagreen;
+  color:#5F95F7;
   font-weight:bold;
+  font-variant:small-caps;
 }
 
 div.pt-book h3 {
   padding:0pt;
-  margin-top:1em;
+  margin-top:2em;
   margin-bottom:1em;
-  color:seagreen;
+  color:#5F95F7;
   font-weight:bold;
 }
 
@@ -35,9 +44,37 @@ div.pt-book p.program{
   text-align:center;
 }
 
+div.pt-book hr.footer{
+  width:110%;
+  background-color:black;
+  border:none;
+  height:2pt;
+
+  margin-left:-10%;
+  margin-top:5em;
+}
+
 div.pt-book p.footer{
+}
+div.pt-book p.footer img{
   text-align:center;
 }
+
+
+div.pt-book table td.hline {
+  border-bottom:1pt solid gray;
+}
+
+div.pt-book  .seperator {
+    width:110%;
+    background-color:#5F95F7;
+    border:none;
+    height:2pt;
+
+    margin-left:-10%;
+    margin-top:5em;
+}
+
 
 
 
@@ -71,6 +108,13 @@ div.pt-book .variablen {
   color:#F0923C;
 }
 
+div.pt-book .malstifte {
+  color:#1AB582;
+}
+
+
+
+
 div.pt-book pre.scratch {
   transform: scale(0.9);
   margin-top:-2%;
@@ -87,7 +131,9 @@ div.pt-book code.scratch svg{
   transform: scale(0.8);
   margin-top:-5%;
   margin-bottom:-20%;
+  margin-left:-10%;
 }
+
 
 
 
@@ -107,12 +153,17 @@ div.pt-book .question > span.nr:before {
 
 
 div.pt-book ol.subquestion {
-
+  margin:0;
+  padding:0;
+  list-style: outside;
 }
 div.pt-book ol.subquestion > li {
     list-style: none;
+    margin-left: 2em;
+    margin-bottom:1em;
 }
 div.pt-book ol.subquestion > li:before {
     content: counter(subquestion, lower-alpha) ") ";
     counter-increment: subquestion;
+    margin-left: -1em;
 }
