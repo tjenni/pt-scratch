@@ -3,7 +3,7 @@
 <html lang="de">
 <head>
   <meta charset="utf-8"/>
-  <title>Vincent van Scratch</title>
+  <title>Modern Art</title>
 </head>
 
 <body>
@@ -28,7 +28,7 @@ Vincent van Scratch
 </p>
 
 <p>
-  Mit Scratch kannst ein bekannter Künstler oder eine bekannte Künstlerin werden 😉. Damit du etwas zeichnen kannst, benötigst du Malstifte. Klicke unten links auf <em>Erweiterung hinzufügen</em> und dann auf <em>Malstift</em>, siehe Video 1.
+  Mit Scratch kannst du ein bekannter Künstler oder eine bekannte Künstlerin werden 😉. Damit du etwas zeichnen kannst, benötigst du Malstifte. Klicke unten links auf <em>Erweiterung hinzufügen</em> und dann auf <em>Malstift</em>, siehe Video 1.
 </p>
 
 
@@ -169,7 +169,8 @@ ende
 
 <p>
   Falls es bei dir nicht funktioniert, klicke <a href="https://scratch.mit.edu/projects/534504435" target="_blank">hier</a> um die Lösung anzuschauen.<br />
-  Die Befehle <b class="steuerung">warte (1) Sekunden</b> helfen dir zu verstehen, wie das Programm funktioniert. Wenn du das Programm ausführst, kannst du die einzelnen Schritte genau mitverfolgen. Scratch zeichnet vom Startpunkt aus eine horizontale Linie, dreht sich dann um 90° im Uhrzeigersinn. Dann wieder holt er diese Schritte viermal. Am Schluss ist ein rotes Quadrat zu sehen.
+  In der Lösung hat es Wartebefehle eingebaut. Wenn du das Programm ausführst, kannst du die einzelnen Schritte genau mitverfolgen, siehe Scratch 1.
+  Scratch zeichnet vom Startpunkt aus eine horizontale Linie, dreht sich dann um 90° im Uhrzeigersinn. Dann wieder holt er diese Schritte viermal. Am Schluss ist ein rotes Quadrat zu sehen.
 </p>
 
 
@@ -178,7 +179,7 @@ ende
   <!--<img src="vincent_van_scratch/buehne_rotes_quadrat.png" alt="" width="80%" />-->
 </p>
 <p class="caption">
-  Abb. 1 – Das rote Quadrat.
+  Scratch 1 – Das rote Quadrat.
 </p>
 
 
@@ -192,13 +193,13 @@ Aufgabe <span class="nr"></span>
 </h3>
 <ol class="subquestion">
   <li>
-    Verändere die Farbe des Quadrates mal auf grün , blau, weiss und schwarz.
+    Verändere die Farbe des Quadrates. Zeichne es einmal grün , blau, weiss und schwarz.
   </li>
   <li>
     Verkleiner und vergrössere das Quadrat.
   </li>
   <li>
-    Drehe das Quadrat ein wenig. Vermutlich hast du schon ein Gefühl dafür, wie man eine Figur auf der Bühne platzieren kann und wie man sie ausrichten muss. Im folgenden werden wir jedoch das Koordinatensystem der Bühne noch etwas genauer anschauen.
+    Drehe das Quadrat ein wenig.
   </li>
 </ol>
 
@@ -210,10 +211,172 @@ Aufgabe <span class="nr"></span>
 <h2>Orientierung auf der Bühne</h2>
 
 <p>
-  Vermutlich hast du schon ein Gefühl dafür, wie man eine Figur auf der Bühne platzieren kann und wie man sie ausrichten muss. Im folgenden werden wir jedoch das Koordinatensystem der Bühne noch etwas genauer anschauen.
+  Vermutlich hast du jetzt schon ein Gefühl dafür, wie man eine Figur auf der Bühne platzieren und ausrichten kann. Im folgenden werden wir jedoch das Koordinatensystem der Bühne genauer anschauen.
+</p>
+
+<p>
+Die Bühne hat eine Grösse von 480 x 360 Pixeln. Der Koordinatennullpunkt (0,0) befindet sich in der Mitte, siehe Abb. 2. Die x-Achse ist nach rechts und die y-Achse nach oben orientiert. Wenn du zum Beispiel deine Figur in den rechten unteren Teil der Bühne verschieben möchtest,  kannst du das mit dem Befehl <b class="bewegung">gehe zu x:(100) y:(-100)</b> machen.
+</p>
+
+<p class="image">
+  <img src="vincent_van_scratch/buehne.svg" alt="" width="100%" />
+</p>
+<p class="caption">
+  Abb. 2 – Das Koordinatensystem der Bühne.
 </p>
 
 
+<p>
+  Jede Figur hat einen Drehpunkt. Wenn du eine Figur verschiebst  oder drehst, bezieht sich das immer auf diesen Punkt. Eine Winkelangabe bezieht sich auf  die Richtung 0°, welche bei Scratch nach oben zeigt, siehe Abb 3. Von diesem Winkel aus werden positive Winkel im Uhrzeigersinn abgetragen.
+</p>
+<p>
+  Diese Konvention ist anders als du es aus der Mathematik kennst. In der Mathematik ist 0° immer in Richtung der positiven x-Achse und positive Winkel werden im Gegenuhrzeigersinn abgetragen. Lass dich dadurch nicht verwirren. 😵‍💫
+</p>
+
+<p class="image">
+  <img src="vincent_van_scratch/richtung.svg" alt="" width="50%" />
+</p>
+<p class="caption">
+  Abb. 3 – Winkelangabe bei der Richtung.
+</p>
+
+
+<p>
+  Wo der Drehpunkt einer Figur ist siehst du im Bereich <em>Kostüme</em>. Wähle im Zeichnungsbereich die Grafik aus und verschiebe sie ein wenig. Es erscheint sofort ein kleines graues Kreuzchen, der Drehpunkt, siehe Video 2.
+</p>
+<!-- Grösse Chromefenster 1060 x 730 -->
+<p class="video">
+    <video width="800" controls="true"><source src="vincent_van_scratch/drehpunkt720.mov">vincent_van_scratch/erweiterung_malstifte720.mov</video>
+</p>
+<p class="caption">
+    Video 2 – Drehpunkt einer Figur verändern.  (Video: T. Jenni)
+</p>
+
+<p>
+Um jetzt ein wenig zu trainieren, löse die folgende Aufgabe.
+</p>
+
+
+<h3 class="question">
+Aufgabe <span class="nr"></span>
+</h3>
+<p>
+  Zeichne die folgenden Figuren auf die Bühne. Versuche sie so gut wie möglich in die Mitte zu platzieren. Versuche Befehle mit <b class="steuerung">wiederhole (x) mal</b> zusammenzufassen, damit dein Programm möglichst kompakt wird.
+</p>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+  <td>
+    <ol class="subquestion">
+      <li>
+        <img src="vincent_van_scratch/zick_zack.svg" alt="" width="100%" style="vertical-align:top;"  />
+      </li>
+    </ol>
+  </td>
+  <td>
+    <ol class="subquestion">
+      <li>
+        <img src="vincent_van_scratch/dreieck.svg" alt="" width="100%"  style="vertical-align:top;" />
+      </li>
+    </ol>
+  </td>
+</tr>
+<tr>
+  <td>
+    <ol class="subquestion">
+      <li>
+        <img src="vincent_van_scratch/maeander.svg" alt="" width="100%"  style="vertical-align:top;" />
+      </li>
+    </ol>
+  </td>
+  <td>
+    <ol class="subquestion">
+      <li>
+        <img src="vincent_van_scratch/stern.svg" alt="" width="100%"  style="vertical-align:top;" />
+      </li>
+    </ol>
+  </td>
+</tr>
+</table>
+
+
+
+
+
+<hr class="seperator" />
+
+<h2>Programmierte Kunst</h2>
+
+<p>
+  Mit dem Computer kann man künstlerische Bilder malen.  Grafiker /-innen und Künstler/-innen verwenden leider nicht Scratch dafür. Viele Künstler verwenden die Programmierumgebung <em>processing</em>. Das ist eine textbasierte Programmiersprache und für uns noch etwas zu schwer. Trotzdem ist es interessant, was die Künstler/-innen für Werke produzieren. Unter dem folgenden Link kannst du dir aktuelle Projekte anschauen.
+</p>
+
+<p style="text-align:center;">
+  <a href="https://openprocessing.org/browse">openprocessing.org</a>
+</p>
+
+<p>
+Wir wollen nun versuchen selber programmierte Kunstwerke herzustellen. Dazu benötigen wir die folgenden Befehle, siehe Tab. 3.
+</p>
+
+
+<table align="left" cellspacing="10" cellpadding="0" border="0">
+<tr>
+  <td><code class="scratch">Zufallszahl von (1) bis (6)</code></td>
+  <td style="vertical-align:top;">
+      Mit diesem Befehl kannst du eine zufällige Zahl im angegenen Bereich erstellen lassen.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">setze Stiftdicke auf (3)</code></td>
+  <td style="vertical-align:top;">
+    Wenn du mit einem dicken Stift zeichnen möchtest, kannst du das mit diesem Befehl machen.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">gehe (10) er Schritt</code></td>
+  <td style="vertical-align:top;">
+    Dieser Befehl verschiebt die Figur an eine zufällige Position auf der Bühne.
+  </td>
+</tr>
+</table>
+<p class="caption">
+  Tab. 3 – Zufallszahl erzeugen, Stiftdicke setzen und Figur an Zufällige Position verschieben.
+</p>
+
+
+
+<p>
+  Übernimm nun das Programm von Prog 3. Zuerst wird Scratch versteckt und die Bühne gelöscht. Das Programm zeichnet 50 Striche mit zufälliger Farbe und Länge.
+</p>
+
+<pre class="scratch">
+Wenn die grüne Flagge angeklickt
+  verstecke dich
+  lösche alles
+  schalte Stift ein
+  wiederhole (50) mal
+    setze Stift (Farbe v) auf  (Zufallszahl von (0) bis (100))
+    setze Stiftdicke auf (Zufallszahl von (1) bis (3))
+    gehe zu (Zufallsposition v)
+</pre>
+<p class="caption">
+    Prog. 3 – Moderne Kunst 1
+</p>
+
+
+<p>
+  Das Resultat sieht nicht so schlecht aus, siehe Scratch 2. Nimm dir nun einen Moment Zeit und verändere die Parameter, d.h. die Zahlen des Programms.
+</p>
+
+<p class="image">
+  <iframe src="https://scratch.mit.edu/projects/534733812/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+</p>
+<p class="caption">
+  Scratch 2 – Moderne Kunst 1
+</p>
 
 
 
@@ -221,20 +384,155 @@ Aufgabe <span class="nr"></span>
 Aufgabe <span class="nr"></span>
 </h3>
 <p>
-  Zeichne die folgenden Figuren auf die Bühne. Versuche sie so gut wie möglich in die Mitte zu platzieren.
+  Verändere Prog. 3  nur durch kleinere Modifikationen. Hier sind einige Ideen.
 </p>
 <ol class="subquestion">
   <li>
-    <img src="vincent_van_scratch/zick_zack.svg" alt="" width="80%" style="vertical-align:top;"  />
+      Die Striche sollen alle etwas dicker sein.
   </li>
   <li>
-    <img src="vincent_van_scratch/stern.svg" alt="" width="80%"  style="vertical-align:top;" />
+    Erzeuge doppelt so viele Striche.
   </li>
   <li>
-    <img src="vincent_van_scratch/maeander.svg" alt="" width="80%"  style="vertical-align:top;" />
+    Die Striche sollen alle schwarz sein. Tipp: Dazu musst du die Helligkeit auf 0 setzen.
+  </li>
+  <li>
+    Schaffst du es auch graue Striche zu erzeugen? Tipp: Du kannst die Helligkeit auf eine Zufallszahl setzen.
   </li>
 </ol>
 
+
+
+
+
+<p>
+  Nun probieren wir ein etwas anspruchsvolleres Bild zu zeichnen. Dazu benötigen wir drei neue Befehle.
+</p>
+
+
+<table align="left" cellspacing="10" cellpadding="0" border="0">
+<tr>
+  <td><code class="scratch">(4) + (5)</code></td>
+  <td style="vertical-align:top;">
+      Mit diesem Befehl kannst du zwei Zahlen addieren.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">(3) * (2)</code></td>
+  <td style="vertical-align:top;">
+    Mit diesem Befehl kannst du zwei Zahlen multiplizieren.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">pralle vom Rand ab</code></td>
+  <td style="vertical-align:top;">
+    Wenn die Figur den Rand erreicht, wird sie umgedreht.
+  </td>
+</tr>
+</table>
+
+<p class="caption">
+  Tab. 4 – Addition, Multiplikation und vom Rand abprallen.
+</p>
+
+
+
+
+<p>
+  Jetzt geht's los. Um das zweite Kunstwerk zu erstellen, übernimm  Prog. 3. Die Hintergrundfarbe der Bühne sollte ein helleres Grau als die Stiftfarbe sein. Verwende für die Hintergrundfarbe Sättigung 0 und Helligkeit 75. Für die Stiftfarbe Sättigung 0 und Helligkeit 48.
+</p>
+
+
+<pre class="scratch">
+Wenn die grüne Flagge angeklickt
+  verstecke dich
+  setze Richtung auf (45) Grad
+  gehe zu x:(0) y:(0)
+  lösche alles
+  setze Stiftfarbe auf (#707070)
+  schalte Stift ein
+  wiederhole (500) mal
+    setze Stiftdicke auf  ((1)+ ((3) * (Zufallszahl von (0) bis (1))))
+    gehe ((10) * (Zufallszahl von (1) bis (4))) er Schritt
+    drehe dich nach rechts um ((90) * (Zufallszahl von (-1) bis (1))) Grad
+    pralle vom Rand ab
+</pre>
+<p class="caption">
+    Prog. 3 – Moderne Kunst 2
+</p>
+
+
+<p>
+Das Resultat sieht schon ziemlich gut aus. Ich bin jedoch sicher, dass du es noch verbessern kannst. Tob dich aus!
+</p>
+
+<p class="image">
+  <iframe src="https://scratch.mit.edu/projects/534760118/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+</p>
+<p class="caption">
+  Scratch 3 – Moderne Kunst 2
+</p>
+
+
+
+
+
+
+<p>
+  Zu guter letzt kannst du ein Foto von dir verändern. Nimm am besten ein Portrait von dir und lade es als Figurkostüm hoch. Es stehen dir die folgenden Befehle zur Verfügung um dein Portrait zu verändern, siehe Tab. 5.
+</p>
+
+
+<table align="left" cellspacing="10" cellpadding="0" border="0">
+<tr>
+  <td><code class="scratch">setze Effekt [Farbe v] auf (50)</code></td>
+  <td style="vertical-align:top;">
+      Die Farbe des Bildes wird verändert.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">setze Effekt [Fischauge v] auf (50)</code></td>
+  <td style="vertical-align:top;">
+    Das Bild wird in der Mitte stark verzerrt. Ver mutlich sieht dich ein Fisch genau so, wenn er dich anschaut.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">setze Effekt [Wirbel v] auf (50)</code></td>
+  <td style="vertical-align:top;">
+    Das Bild wird verwirbelt.
+  </td>
+</tr>
+</table>
+
+<p class="caption">
+  Tab. 5 – Bildeffekte
+</p>
+
+
+<p>
+  Unter <a href="https://scratch.mit.edu/projects/534764628" target="_blank"> diesem Link</a> findest du das Programm Scratch 4.Beachte, dass du im Kostümeditor an den Rändern des Bildes vier kleine Punkte hinmalen musst. Ansonsten stimmt der Verzerrungsmittelpunkt nicht.
+</p>
+
+
+<p class="image">
+  <iframe src="https://scratch.mit.edu/projects/534764628/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+</p>
+<p class="caption">
+  Scratch 4 – Moderne Portraits
+</p>
+
+
+
+<p>
+  Das macht Spass ohne Ende  🙃 , ..., obwohl leider sind wir nun mit dem Kapitel am Schluss. Hoffentlich hat es euch Spass gemacht.
+</p>
+<p style="text-align:center;">
+  <span style="margin-left:1em;font-size:300%;">👩🏻‍🎨 🧑🏼‍🎨</span>
+</p>
 
 
 <hr class="footer">
@@ -254,7 +552,6 @@ Aufgabe <span class="nr"></span>
 </p>
 
 </div>
-
 
 
 <!--
