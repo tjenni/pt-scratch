@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+  <meta charset="utf-8"/>
+  <title>Modern Art</title>
+</head>
+
+<body>
+
+<div class="pt-book">
+
+<!-- load css file -->
+<script type="text/javascript">
+  var fileref = document.createElement("link");
+  fileref.rel = "stylesheet";
+  fileref.type = "text/css";
+  fileref.href = "_css/pt-book.css";
+  document.getElementsByTagName("head")[0].appendChild(fileref)
+</script>
+
+
+<h1>
+Modern Art
+</h1>
+
+<p>
+  Mit dem Computer kann man auch künstlerische Bilder malen.  Viele Künstler und Künstlerinnen verwenden die Programmierumgebung <em>Processing</em> um digitale Kunst zu erstellen. Processing ist eine textbasierte Programmiersprache und für uns Scratcher noch etwas zu schwer. Trotzdem ist es interessant, was die Künstler/-innen für Werke produzieren. Unter dem folgenden Link kannst du dir aktuelle Projekte anschauen.
+</p>
+
+<p style="text-align:center;">
+  <a href="https://openprocessing.org/browse">openprocessing.org</a>
+</p>
+
+
+
+<h2>
+  Herbstfarben
+</h2>
+
+
+<p>
+Wir wollen nun versuchen selber programmierte Kunstwerke herzustellen. Dazu benötigen wir die folgenden Befehle, siehe Tab. 3.
+</p>
+
+<table align="left" cellspacing="10" cellpadding="0" border="0">
+<tr>
+  <td><code class="scratch">Zufallszahl von (1) bis (6)</code></td>
+  <td style="vertical-align:top;">
+      Mit diesem Befehl kannst du eine zufällige Zahl im angegenen Bereich erstellen lassen.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">setze Stift [Sättigung v] auf (50)</code></td>
+  <td style="vertical-align:top;">
+    Die Sättigung gibt an wie intensiv die Farbe ist. Eine Sättigung von 0 produziert nur noch Grautöne und eine Sättigung von 100 ist maximal farbig.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">setze Stift [Helligkeit v] auf (50)</code></td>
+  <td style="vertical-align:top;">
+    Die Helligkeit gibt an wie hell eine Farbe ist. Eine Helligkeit von 0 produziert ein reines Schwarz eine Helligkeit von 100 lässt die Farbe hell erscheinen.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">setze Stiftdicke auf (3)</code></td>
+  <td style="vertical-align:top;">
+    Wenn du mit einem dicken Stift zeichnen möchtest.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">gehe zu (Zufallsposition v)</code></td>
+  <td style="vertical-align:top;">
+    Dieser Befehl verschiebt die Figur an eine zufällige Position auf der Bühne.
+  </td>
+</tr>
+</table>
+<p class="caption">
+  Tab. 3 – Zufallszahl erzeugen, Sättigung, Helligkeit, Stiftdicke setzen und Figur an zufällige Position verschieben.
+</p>
+
+
+
+<p>
+  Übernimm nun das Programm von Prog 3. Zuerst wird Scratch versteckt und die Bühne gelöscht. Das Programm zeichnet 50 Striche mit zufälliger Farbe und Länge. Die Hintergrundfarbe hat die Werte Farbe 13, Sättigung 16, Helligkeit 96.
+</p>
+
+<pre class="scratch">
+Wenn die grüne Flagge angeklickt
+  verstecke dich
+  lösche alles
+  schalte Stift ein
+  wiederhole (50) mal
+    setze Stift (Farbe v) auf  (Zufallszahl von (0) bis (20))
+    setze Stift (Sättigung v) auf  (Zufallszahl von (30) bis (50))
+    setze Stift (Helligkeit v) auf  (Zufallszahl von (1) bis (50))
+    setze Stiftdicke auf (Zufallszahl von (5) bis (15))
+    gehe zu (Zufallsposition v)
+</pre>
+<p class="caption">
+    Prog. 3 – Herbstfarben
+</p>
+
+
+<p>
+  Das Resultat sieht nicht so schlecht aus, siehe Scratch 2. Nimm dir nun einen Moment Zeit und verändere die Parameter, d.h. die Zahlen des Programms.
+</p>
+
+<p class="image">
+  <iframe src="https://scratch.mit.edu/projects/534733812/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+</p>
+<p class="caption">
+  Scratch 2 – Herbstfarben
+</p>
+
+
+
+<h3 class="question">
+Aufgabe <span class="nr"></span>
+</h3>
+<p>
+  Verändere Prog. 3  nur durch kleinere Modifikationen. Hier sind einige Ideen.
+</p>
+<ol class="subquestion">
+  <li>
+      Die Striche sollen alle etwas dicker sein.
+  </li>
+  <li>
+    Erzeuge doppelt so viele Striche.
+  </li>
+  <li>
+    Die Striche sollen alle schwarz sein. Tipp: Dazu musst du die Helligkeit auf 0 setzen.
+  </li>
+  <li>
+    Schaffst du es auch graue Striche zu erzeugen? Tipp: Du kannst die Helligkeit auf eine Zufallszahl setzen.
+  </li>
+</ol>
+
+
+
+
+<hr class="seperator" />
+
+<h2>
+  Graues Netzwerk
+</h2>
+
+<p>
+  Nun probieren wir ein etwas anspruchsvolleres Bild zu zeichnen. Dazu benötigen wir drei neue Befehle.
+</p>
+
+
+<table align="left" cellspacing="10" cellpadding="0" border="0">
+<tr>
+  <td><code class="scratch">(4) + (5)</code></td>
+  <td style="vertical-align:top;">
+      Mit diesem Befehl kannst du zwei Zahlen addieren.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">(3) * (2)</code></td>
+  <td style="vertical-align:top;">
+    Mit diesem Befehl kannst du zwei Zahlen multiplizieren.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">pralle vom Rand ab</code></td>
+  <td style="vertical-align:top;">
+    Wenn die Figur den Rand erreicht, wird sie umgedreht.
+  </td>
+</tr>
+</table>
+
+<p class="caption">
+  Tab. 4 – Addition, Multiplikation und vom Rand abprallen.
+</p>
+
+
+
+
+<p>
+  Jetzt geht's los. Um das zweite Kunstwerk zu erstellen, übernimm  Prog. 3. Die Hintergrundfarbe der Bühne sollte ein helleres Grau als die Stiftfarbe sein. Verwende für die Hintergrundfarbe Sättigung 0 und Helligkeit 75. Für die Stiftfarbe Sättigung 0 und Helligkeit 48.
+</p>
+
+
+<pre class="scratch">
+Wenn die grüne Flagge angeklickt
+  verstecke dich
+  setze Richtung auf (45) Grad
+  gehe zu x:(0) y:(0)
+  lösche alles
+  setze Stiftfarbe auf (#707070)
+  schalte Stift ein
+  wiederhole (500) mal
+    setze Stiftdicke auf  ((1)+ ((3) * (Zufallszahl von (0) bis (1))))
+    gehe ((10) * (Zufallszahl von (1) bis (4))) er Schritt
+    drehe dich nach rechts um ((90) * (Zufallszahl von (-1) bis (1))) Grad
+    pralle vom Rand ab
+</pre>
+<p class="caption">
+    Prog. 3 – Graues Netzwerk
+</p>
+
+
+<p>
+Das Resultat sieht schon ziemlich gut aus. Ich bin jedoch sicher, dass du es noch verbessern kannst. Tob dich aus!
+</p>
+
+<p class="image">
+  <iframe src="https://scratch.mit.edu/projects/534760118/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+</p>
+<p class="caption">
+  Scratch 3 – Graues Netzwerk
+</p>
+
+
+
+
+
+<hr class="seperator" />
+
+<h2>
+  Verzerrte Wahrnehmung
+</h2>
+
+<p>
+  Wir werden nun versuchen ein Bild zu verzerren und zu modifizieren. Nimm am besten ein Portrait von dir und lade es als Figurkostüm hoch. Es stehen dir die folgenden Befehle zur Verfügung um dein Portrait zu verändern, siehe Tab. 5.
+</p>
+
+
+<table align="left" cellspacing="10" cellpadding="0" border="0">
+<tr>
+  <td><code class="scratch">setze Effekt [Farbe v] auf (50)</code></td>
+  <td style="vertical-align:top;">
+      Die Farbe des Bildes wird verändert.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">setze Effekt [Fischauge v] auf (50)</code></td>
+  <td style="vertical-align:top;">
+    Das Bild wird in der Mitte stark verzerrt. Ver mutlich sieht dich ein Fisch genau so, wenn er dich anschaut.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">setze Effekt [Wirbel v] auf (50)</code></td>
+  <td style="vertical-align:top;">
+    Das Bild wird verwirbelt.
+  </td>
+</tr>
+</table>
+
+<p class="caption">
+  Tab. 5 – Bildeffekte
+</p>
+
+
+<p>
+  Unter <a href="https://scratch.mit.edu/projects/534764628" target="_blank"> diesem Link</a> findest du das Programm Scratch 4. Beachte, dass du im Kostümeditor an den Rändern des Bildes vier kleine Punkte hinmalen musst. Ansonsten stimmt der Verzerrungsmittelpunkt nicht.
+</p>
+
+
+<pre class="scratch">
+Wenn die grüne Flagge angeklickt
+  setze [i v] auf (0)
+  wiederhole (19) mal
+    ändere [i v] um (1)
+    setze Effekt [Farbe v] auf (i)
+    setze Effekt [Fischauge v] auf ((3)*(i))
+    setze Effekt [Wirbel v] auf ((3)*(i))
+    warte (0.2) Sekunden
+</pre>
+<p class="caption">
+    Prog. 3 – Verzerrte Wahrnehmung
+</p>
+
+
+
+
+
+<p class="image">
+  <iframe src="https://scratch.mit.edu/projects/534764628/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+</p>
+<p class="caption">
+  Scratch 4 – Verzerrte Wahrnehmung
+</p>
+
+
+
+<p>
+  Das macht Spass ohne Ende 🙃. Leider sind wir nun mit dem Kapitel am Schluss. Hoffentlich hat es euch Spass gemacht.
+</p>
+<p style="text-align:center;">
+  <span style="font-size:300%;">👩🏻‍🎨 🧑🏼‍🎨</span>
+</p>
+<p style="text-align:center;">
+  Tschüss!
+</p>
+
+
+<hr class="footer">
+
+<p class="footer">
+  Autoren:  T. Jenni<br />
+  Letzte Änderung: 21. Mai 2021
+</p>
+
+<p class="license">
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+          <img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+</p>
+
+<p>
+   <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title" style="font-style: italic;">Einsteigerkurs für den BBC micro:bit</span> von <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/tjenni/microbit" property="cc:attributionName" rel="cc:attributionURL">T. Jenni, et al.</a> ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.
+</p>
+
+</div>
+
+
+<!--
+  Lade scratch block renderer
+  https://github.com/scratchblocks/scratchblocks
+-->
+<script src="_js/scratchblocks-v3.4-min.js"></script>
+<script src="_js/de.js"></script>
+
+<script>
+scratchblocks.loadLanguages({
+  de : de
+});
+
+scratchblocks.renderMatching('pre.scratch', {
+  style:     'scratch3',
+  languages: ['de']
+});
+
+scratchblocks.renderMatching("code.scratch", {
+  inline: true,
+  style:     'scratch3',
+  languages: ['de']
+});
+
+</script>
+
+</body>
+</html>

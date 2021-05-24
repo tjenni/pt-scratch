@@ -31,6 +31,10 @@ div.pt-book h3 {
   font-weight:bold;
 }
 
+div.pt-book video {
+  width:100%;
+}
+
 div.pt-book p.caption  {
   text-align: center;
   text-emphasis:italic;
