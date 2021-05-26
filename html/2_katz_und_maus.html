@@ -33,7 +33,7 @@
 </p>
 
 <p>
-  Erstelle auf <a href="https://scratch.mit.edu/projects/editor" target="_blank">scratch.mit.edu</a> neues Projekt. Klicke unten rechts bei <em>Bühne</em> auf das <em>Bühnenbild 1</em> und zeichne ein grosses grünes Rechteck, siehe Video 1. Die Bühne sieht nun aus wie ein Stück Rasen auf welchem dann die Katze die Mäuse fängt.
+  Erstelle auf <a href="https://scratch.mit.edu/projects/editor" target="_blank">scratch.mit.edu</a> neues Projekt. Klicke unten rechts bei <em>Bühne</em> auf das <em>Bühnenbild&nbsp;1</em> und zeichne ein grosses grünes Rechteck. Füge dann die Katzenfigur (Cat 2) hinzu und ändere die Grösse der Figur auf 50 %, siehe Video 1.
 </p>
 
 <!-- Grösse Chromefenster 1060 x 730 -->
@@ -41,7 +41,12 @@
     <video width="800" controls="true"><source src="katz_und_maus/gruener_hintergrund720.mov">katz_und_maus/gruener_hintergrund720.mov</video>
 </p>
 <p class="caption">
-    Video 1 – Grüner Hintergrund zeichen  (Video: T. Jenni)
+    Video 1 – Grüner Hintergrund zeichnen und Katz einfügen. (Video: T. Jenni)
+</p>
+
+
+<p>
+  Scratch arbeitet mit einer Theater Metapher, d.h. es gibt eine Bühne mit verschiedenen Bühnenbilder. Auf der Bühne können Figuren auftreten. Eine Figur kann verschiedene Kostüme haben und so ihr Aussehen verändern. Wie die Figuren sich verhalten ist im Drehbucht (Skript) festgehalten.
 </p>
 
 
@@ -49,17 +54,17 @@
 
 <h2>Die Katze</h2>
 
-<p>
-Füge eine Katzenfigur (Cat 2) hinzu, siehe Abb. 1. Setze die Grösse der Figur auf 50 %, siehe Video 1. Übernimm dann für die Katze den Code von Prog. 1.
-</p>
-
 <p class="image">
-  <img src="katz_und_maus/cat2.svg" alt="Cat2 Sprite" width="40%" />
+  <img src="katz_und_maus/katze.svg" alt="" width="40%" />
 </p>
 <p class="caption">
   Abb. 1 – Kostüm der Figur "Cat 2".
 </p>
 
+
+<p>
+  Die Katze soll immerzu dem Mauszeiger folgen. Dazu richtet sie sich immerzu auf ihn aus und läuft auf ihn zu, wenn er mehr als 5 Schritte entfernt ist. Übernimm für die Katze den Code von Prog. 1. Wenn du Mühe hast die Befehle zu finden, schau dir das Video 2 an.
+</p>
 
 <pre class="scratch">
 Wenn die grüne Flagge angeklickt
@@ -70,7 +75,6 @@ wiederhole bis < (Stoppuhr) > (20) >
   falls < (Entfernung von (Mauszeiger v)) > (5)>, dann
     gehe (5) er Schritt
   ende
-
   drehe dich zu (Mauszeiger v)
 ende
 verstecke dich
@@ -80,37 +84,121 @@ stoppe [alles v]
     Prog. 1 – Programm für die Katze
 </p>
 
+
+<!-- Grösse Chromefenster 1060 x 730 -->
+<p class="video">
+    <video width="800" controls="true"><source src="katz_und_maus/katze_programm720.mov">katz_und_maus/katze_programm720.mov</video>
+</p>
+<p class="caption">
+    Video 2 – Das Katzenprogramm erstellen  (Video: T. Jenni)
+</p>
+
+
 <p>
   Wir lesen dieses Programm gemeinsam durch und versuchen es zu verstehen.  Programme sind wie Kochrezepte. Sie werden von oben nach unten schrittweise ausgeführt.
 </p>
 
-<p>
-  Der erste Befehl <b class="ereignisse">Wenn <b class="operatoren">grüne Flagge</b> angeklickt wird</b> wird nur dann ausgeführt, wenn man oberhalb der Bühne auf die grüne Flagge klickt.
-</p>
 
-<p>
-  Mit dem zweiten Befehl <b class="bewegung">gehe zu x: 0 y: 0</b> wird die Katze in die Mitte der Bühne verschoben. Die Mitte der Bühne hat die Koordinaten (0,0). Anschliessend wird mit <b class="aussehen">zeige dich</b>, die Katze angezeigt.
-</p>
+<table border="0" cellpadding="10" cellspacing="0">
+<tr>
+  <td>
+    <code class="scratch">Wenn die grüne Flagge angeklickt</code>
+  </td>
+  <td>
+      Alle Befehle, welche an diesem Befehl angeschlossen sind werden nacheinander ausgeführt, wenn man oberhalb der Bühne auf die grüne Flagge klickt.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td>
+    <code class="scratch">gehe zu x:(0) y:(0)</code>
+  </td>
+  <td>
+      Die Katze wird auf der Bühne in die Mitte gesetzt. Die Mitte der Bühne hat die Koordinaten x: 0 und y:0.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td>
+    <code class="scratch">zeige dich</code>
+  </td>
+  <td>
+      Eine Figur kann sichtbar oder unsichtbar sein. Mit diesem Befehl wird eine versteckte Figur sichtbar. Es ist gut, dass die Katze erst dann sichtbar wird, wenn sie an der richtigen Stelle auf der Bühne ist.<br />
+      <br />
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td>
+    <code class="scratch">setze Stoppuhr zurück</code>
+  </td>
+  <td>
+      Ein Spiel soll jeweils 20 Sekunden dauern. Mit dem Befehl wird die interne Stoppuhr auf null gesetzt. Die Stoppuhr zählt automatisch die Sekunden die verstreichen. Man kann sie auf der Bühne anzeigen lassen, indem man bei der Befehlsliste auf das Kästchen neben dem runden Stoppuhr-Block klickt.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td colspan="2" style="padding-top:2em;">
+    <pre class="scratch small">
+        wiederhole bis < (Stoppuhr) > (20) >
+    </pre>
+  </td>
+</tr>
+</tr>
+  <td colspan="2" style="padding-top:2em;">
+    Alle Blöcke in diesem Zangenbefehl werden während 20 Sekunden immerzu wiederholt. Wenn die Zeit abgelaufen ist, wird das Programm nacheinander die Befehle bearbeiten, welche unterhalb von diesem Block angeschlossen sind.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td colspan="2" style="padding-top:2em;">
+    <pre class="scratch small">
+      falls < (Entfernung von (Mauszeiger v)) > (5)>, dann
+        gehe (5) er Schritt
+      ende
+    </pre>
+  </td>
+</tr>
+</tr>
+  <td colspan="2" style="padding-top:2em;">
+    Der Befehl in diesem Zangenblock wird nur dann ausgeführt, wenn die Katze mehr als 5 Schritte vom Mauszeiger entfernt ist. In diesem Fall wird sich die Katze fünf Schritte auf den Mauszeiger zubewegen.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td>
+    <code class="scratch">
+        drehe dich zu (Mauszeiger v)
+    </code>
+  </td>
+  <td>
+    Alle Blöcke in diesem Zangenbefehl werden während 20 Sekunden immerzu wiederholt.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td>
+    <code class="scratch">
+        verstecke dich
+    </code>
+  </td>
+  <td>
+    Das Spiel ist zu Ende. Die Katze wird ausgeblendet.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td>
+    <code class="scratch">
+        stoppe [alles v]
+    </code>
+  </td>
+  <td>
+    Alle Programme werden gestoppt.  Es ist sinnvoll ein Programm durch einen Stopp-Befehl zu beenden. Auf diese Weise wird alles was noch am laufen ist gestoppt.
+  </td>
+</tr>
+</table>
 
-<p>
-  Ein Spiel soll jeweils 20 Sekunden dauern. Mit dem Befehl <b class="fühlen">setze Stoppuhr zurück</b>  wird die interne Stoppuhr auf null gesetzt. Die Stoppuhr zählt automatisch die Sekunden die verstreichen.
-</p>
-
-<p>
-  Jetzt kommt der Zangenbefehl <b class="steuerung">wiederhole bis <b class="fühlen">Stoppuhr</b> <b class="operatoren"> > 20 </b> </b>. Das bedeutet, dass alle Befehle in der Zange wiederholt werden, bis die Stoppuhr mehr als 20 Sekunden anzeigt. D.h. das Spiel ist in seiner Dauer auf 20 Sekunden begrenzt.
-</p>
-
-<p>
-  In der Wiederholen-Zange gibt es einen weiteren Zangenbefehl <b class="steuerung">falls <b class="fühlen"> Entfernung von Mauszeiger </b> <b class="operatoren"> > 5 </b>, dann</b>. Die Befehle innerhalb von diesem Zangenbefehl werden nur dann ausgeführt, wenn die Katz weiter als 5 Schritte vom Mauszeiger entfernt ist. Falls dies der Fall ist, bewegt sich die Katze mit <b class="bewegung">gehe 5 er Schritt</b>  vorwärts.
-</p>
-
-<p>
-  Zuletzt wird mit <b class="bewegung">drehe dich zu Mauszeiger</b> die Katze immer in Richtung des Mauszeigers ausgerichtet. Da sich alle diese  Befehle in der <b class="steuerung">wiederhole bis...</b>-Zange befinden, werden sie immerzu wiederholt. D.h. die Katze wird sich immerzu auf den Mauszeiger ausrichten und wenn sie mehr als 5 Schritte entfernt ist, sich in dessen Richtung bewegen. Du kannst das Programm testen, indem du auf die grüne Flagge klickst.
-</p>
-
-<p>
-  Nach dem <b  class="steuerung">wiederhole bis ... </b>-Befehl, räumen wir etwas auf. Zuerst wird die Katze mit <b class="aussehen">verstecke dich</b> ausgeblendet und dann das Programm mit <b  class="steuerung">stoppe [alles]</b> beendet.
-</p>
 
 
 
@@ -118,28 +206,18 @@ stoppe [alles v]
 
 <h2>Die Maus</h2>
 
-<p>
-Weiter geht es mit der Maus. Füge die Mausfigur (Mouse1) hinzu und setze ihre Grösse auch auf 50 %. Übernimm anschliessend für sie den Code von Prog. 2.
-</p>
-
 <p class="image">
-  <img src="katz_und_maus/mouse1-a.svg" alt="Mouse1 Sprite" width="40%" />
+  <img src="katz_und_maus/maus.svg" alt="" width="40%" />
 </p>
 <p class="caption">
   Abb. 2 – Kostüm der Figur "Mouse1".
 </p>
 
 <p>
-Der Befehl <b class="variablen">setze Punkte auf 0</b> bezieht sich auf eine Variable. Eine Variable kann man sich wie ein Notizzettel vorstellen auf den man eine einzige Zahl notieren kann. Der Name der Variable verrät ihren Zweck. Es handelt sich um den Punktestand, welcher der Spieler während des Spiels hat.
+Weiter geht es mit der Maus. Füge die Mausfigur (Mouse1) hinzu und setze ihre Grösse auch auf 50 %. Übernimm anschliessend für sie Prog. 2. Achtung! Der Befehl <b class="variablen">setze Punkte auf 0</b> bezieht sich auf eine Variable. Eine Variable kann man sich wie ein Notizzettel vorstellen auf den man eine einzige Zahl notieren kann. Der Name der Variable verrät ihren Zweck. Es handelt sich um den Punktestand, welcher der Spieler während des Spiels hat. Im Video 3 wird gezeigt, wie man eine Variable erstellen kann. In Video 4 siehst du wie man das Mausprogramm zusammenstellt.
 </p>
 
-<!-- Grösse Chromefenster 1060 x 730 -->
-<p class="video">
-    <video width="800" controls="true"><source src="katz_und_maus/variable_erstellen720.mov">katz_und_maus/variable_erstellen720.mov</video>
-</p>
-<p class="caption">
-    Video 2 – Variable erstellen  (Video: T. Jenni)
-</p>
+
 
 
 <pre class="scratch">
@@ -161,13 +239,21 @@ ende
     Prog. 2 – Programm für die Maus
 </p>
 
+<!-- Grösse Chromefenster 1060 x 730 -->
+<p class="video">
+    <video width="800" controls="true"><source src="katz_und_maus/maus_programm720.mov">katz_und_maus/maus_programm720.mov</video>
+</p>
+<p class="caption">
+    Video 3 – Das Mausprogramm erstellen  (Video: T. Jenni)
+</p>
+
 
 <p>
   Das Mausprogramm lesen wir ebenfalls gemeinsam durch. Der erste Befehl lautet wie bei der Katze <b class="ereignisse">Wenn <b class="operatoren">grüne Flagge</b> angeklickt wird</b>. Der zweite Befehl erstellt setzt die Variable <b class="variablen">Punkte</b> auf 0.
 </p>
 
 <p>
-  Jetzt wird die Maus mit dem Befehl <b class="aussehen">verstecke dich</b> versteckt. Als nächstes kommt der Zangenbefehl <b  class="steuerung">wiederhole fortlaufend</b>. Alle Befehle in dieser Zange werden immerzu wiederholt.
+  Jetzt wird die Maus mit dem Befehl <b class="aussehen">verstecke dich</b> versteckt. Alle Befehle innerhalb des Zangenbefehls <b  class="steuerung">wiederhole fortlaufend</b> werden immerzu wiederholt.
 </p>
 
 <p>
@@ -179,7 +265,12 @@ ende
 </p>
 
 <p>
-  Das Mausprogramm pausiert dann eine zufällige Anzahl von Sekunden bevor wieder die Maus wieder erscheint.
+  Das Mausprogramm pausiert dann eine zufällige Anzahl von Sekunden bevor wieder die Maus wieder erscheint. Welchen Highscore kannst du erziehlen?
+</p>
+
+
+<p style="text-align:center;margin-top:4em;">
+  <span style="font-size:400%;">‍🥇🥈🥉</span>
 </p>
 
 

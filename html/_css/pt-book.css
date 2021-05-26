@@ -132,6 +132,14 @@ div.pt-book pre.scratch {
   text-align:center;
 }
 
+div.pt-book pre.small svg{
+  transform: scale(0.9);
+  margin-top:0%;
+  margin-bottom:-5%;
+  margin-left:-5%;
+  padding:0;
+}
+
 div.pt-book code.scratch {
   display:inline;
   text-align:left;
@@ -144,6 +152,8 @@ div.pt-book code.scratch svg{
   margin-left:-5%;
   padding:0;
 }
+
+
 
 
 
