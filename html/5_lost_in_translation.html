@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+  <meta charset="utf-8"/>
+  <title>Lost in Translation</title>
+</head>
+
+<body>
+
+<div class="pt-book">
+
+<!-- load css file -->
+<script type="text/javascript">
+  var fileref = document.createElement("link");
+  fileref.rel = "stylesheet";
+  fileref.type = "text/css";
+  fileref.href = "_css/pt-book.css";
+  document.getElementsByTagName("head")[0].appendChild(fileref)
+</script>
+
+
+<h1>
+Lost in Translation
+</h1>
+
+<p style="text-align:center;">
+  <span style="font-size:300%;">🇫🇷 🇬🇧 🇮🇹 🇪🇸</span>
+</p>
+
+<p>
+  In dieser Lektion werden wir ein Programm erstellen, mit welchem du deine Ausprache in Französisch, Englisch, Italienisch, Spanisch, Portugiesisch, Polnisch, Chinesisch, usw. verbessern kannst.
+</p>
+
+
+<p>
+  Das Programm funktioniert so, dass man eine Liste von deutschen Wörtern eingibt.  Anschliessend wird man vom Programm abgefragt. Zum Beispiel: Was heisst &laquo;der Baum&raquo; auf Französisch?  Der Benutzer muss dann die Übersetzung laut aussprechen. Das Programm spricht nachher die korrekte Übersetzung aus und zeigt das übersetzte Wort an. Auf diese Weise kann man die Vokabeln auch über das Gehör lernen.
+</p>
+
+<p>
+  Öffne ein neues Scratch-Projekt und lade die Erweiterungen &laquo;Text zu Sprache&raquo; und &laquo;Übersetzung&raquo;.
+</p>
+
+
+
+<hr class="seperator" />
+
+<h2>
+  Listen
+</h2>
+
+<p>
+  Zuerst benötigen wir eine Liste mit den Vokabeln. Zum Glück gibt es in Scratch die Möglichkeit Listen anzulegen. Gehe dazu auf <b class="variablen">Variablen</b> und erstelle eine  <b class="variablen">Neue Liste</b> mit dem Namen <em>Vokabeln</em>. Fülle die Liste dann mit ein paar deutschen Wörter, siehe Video 1.
+</p>
+
+
+<p>
+  TODO: VIDEO
+</p>
+
+
+
+
+
+
+<table align="left" cellspacing="10" cellpadding="0" border="0">
+<tr>
+  <td><code class="scratch">füge [Tomaten] zu [Einkaufsliste v] hinzu</code></td>
+  <td style="vertical-align:top;">
+    Füge einen neuen Eintrag am Ende der Liste hinzu.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">(Element (3) von [Einkaufsliste v])</code></td>
+  <td style="vertical-align:top;">
+    Lies das dritte Element von der Liste.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">lösche (4) aus [Einkaufsliste v]</code></td>
+  <td style="vertical-align:top;">
+    Lösche den vierten Listeneintrag.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">lösche alles aus [Einkaufsliste v]</code></td>
+  <td style="vertical-align:top;">
+      Mit diesem Befehl werden alle Listeneinträge gelöscht.
+  </td>
+</tr>
+</table>
+<p class="caption">
+  Tab. 3 – Grundlegende Listenbefehle
+</p>
+
+
+
+
+
+
+<p>
+  Nun benötigen wir noch zwei weitere Listen. Die Liste  <em>Fragen</em> wird später dann die deutschen Wörter und die Liste <em>Antworten</em> die Übersetzungen enthalten. Die beiden Listen sind nötig,  damit anschliessend alle Wörter nur einmal und in zufälliger Reihenfolge abgefragt werden können. Übernimm nun den Programmcode von Prog. 1.
+</p>
+
+
+<pre class="scratch">
+Wenn die grüne Flagge angeklickt
+  setze [Sprache v] auf [Französisch]
+  setze Sprache auf (Sprache) :: tts
+  ändere die Stimme zu (Alt v) :: tts
+  lösche alles aus [Fragen v]
+  lösche alles aus [Antworten v]
+</pre>
+<p class="caption">
+    Prog. 1 – Initialisierung
+</p>
+
+
+
+
+<p>
+
+</p>
+
+
+
+
+
+<table align="left" cellspacing="10" cellpadding="0" border="0">
+<tr>
+  <td><code class="scratch">setze Sprache auf (Französisch v) :: tts</code></td>
+  <td style="vertical-align:top;">
+    Lege die Sprache für die Sprachausgabe fest.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">ändere die Stimme zu (Alt v) :: tts</code></td>
+  <td style="vertical-align:top;">
+    Lege die Stimme für die Sprachausgabe fest.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">sage [la femme] :: tts</code></td>
+  <td style="vertical-align:top;">
+      Die Sprachausgabe spricht den Text mit der festgelegten Stimme und in der festgelegten Sprache.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td colspan="2" style="padding-top:2em;">
+    <pre class="scratch small">
+        übersetze [der Mann] nach (Französisch v) :: translate
+    </pre>
+  </td>
+</tr>
+</tr>
+  <td colspan="2" style="padding-top:2em;">
+    Der angegebene Text wird in eine andere Sprache übersetzt.
+  </td>
+</tr>
+</table>
+<p class="caption">
+  Tab. 3 – Sprachausgabe und Übersetzung
+</p>
+
+
+
+
+
+
+
+
+
+
+<pre class="scratch">
+. . . :: #B7B7B7
+setze [i v] auf [1]
+wiederhole ( Länge von [Vokabeln v]) mal
+  füge (Element (i) von [Vokabeln v]) zu [Fragen v] hinzu
+  füge (übersetze (Element (i) von [Vokabeln v]) nach Sprache :: translate) zu [Antworten v] hinzu
+  ändere [i v] um (1)
+ende
+</pre>
+<p class="caption">
+    Prog. 2 –  Fülle die Fragen und Antwort Listen mit Inhalten
+</p>
+
+
+
+
+<pre class="scratch">
+. . . :: #B7B7B7
+sage (verbinde [Was heisst auf ] und (Sprache)) für (2) Sekunden
+wiederhole bis < (Länge von [Antworten v]) = (0) >
+setze [i v] auf (Zufallszahl von (1) bis (Länge von [Antworten v]))
+sage (Element (i) von [Fragen v])
+sage (Element (i) von [Antworten v]) :: tts
+lösche (i) aus [Fragen v]
+lösche (i) aus [Antworten v]
+ende
+</pre>
+<p class="caption">
+    Prog. 3 –  Frage die Vokabeln in zufälliger Reihenfolge ab.
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr class="footer">
+
+<p class="footer">
+  Autoren:  T. Jenni<br />
+  Letzte Änderung: 21. Mai 2021
+</p>
+
+<p class="license">
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+          <img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+</p>
+
+<p>
+   <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title" style="font-style: italic;">Einsteigerkurs für den BBC micro:bit</span> von <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/tjenni/microbit" property="cc:attributionName" rel="cc:attributionURL">T. Jenni, et al.</a> ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.
+</p>
+
+</div>
+
+
+<!--
+  Lade scratch block renderer
+  https://github.com/scratchblocks/scratchblocks
+-->
+<script src="_js/scratchblocks-v3.4-min.js"></script>
+<script src="_js/de.js"></script>
+
+<script>
+scratchblocks.loadLanguages({
+  de : de
+});
+
+scratchblocks.renderMatching('pre.scratch', {
+  style:     'scratch3',
+  languages: ['de']
+});
+
+scratchblocks.renderMatching("code.scratch", {
+  inline: true,
+  style:     'scratch3',
+  languages: ['de']
+});
+
+</script>
+
+</body>
+</html>
