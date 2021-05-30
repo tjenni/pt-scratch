@@ -50,84 +50,210 @@ Lost in Translation
 </h2>
 
 <p>
-  Zuerst benötigen wir eine Liste mit den Vokabeln. Zum Glück gibt es in Scratch die Möglichkeit Listen anzulegen. Gehe dazu auf <b class="variablen">Variablen</b> und erstelle eine  <b class="variablen">Neue Liste</b> mit dem Namen <em>Vokabeln</em>. Fülle die Liste dann mit ein paar deutschen Wörter, siehe Video 1.
+  Zuerst benötigen wir eine Liste welche die Vokabeln enthält. Es gibt in Scratch die Möglichkeit eigene Listen anzulegen. Gehe dazu auf <b class="variablen">Variablen</b> und erstelle eine  <b class="variablen">Neue Liste</b> mit dem Namen <em>Vokabeln</em>. Fülle die Liste dann mit ein paar deutschen Wörter, siehe Video 1.
 </p>
-
 
 <p>
   TODO: VIDEO
 </p>
 
+<p>
+Listen sind sehr praktisch wenn man verschiedene Dinge übersichtlich aufschreiben möchte. Hast du auch schon mal eine Liste von Sachen erstellt? Eine Einkaufsliste oder eine Wunschliste für Weihnachtsgeschenke?
+</p>
 
+<p>
+Es gibt verschiedene Dinge, die man mit Listen machen kann.  Man kann zum Beispiel einen neuen Eintrag am Ende der Liste anfügen oder man kann einen Eintrag ausradieren. Natürlich kann man die Liste jederzeit lesen.
+</p>
 
-
+<p>
+Bei Scratch hat jeder Listeneingtrag eine Nummer. Wenn man einen Eintrag der Liste lesen möchte, muss man stets diese Nummer angeben. In der Tabelle 1. sind grundlegende Listenbefehle aufgeführt.
+</p>
 
 
 <table align="left" cellspacing="10" cellpadding="0" border="0">
 <tr>
-  <td><code class="scratch">füge [Tomaten] zu [Einkaufsliste v] hinzu</code></td>
+  <td><code class="scratch">füge [der Berg] zu [Vokabeln v] hinzu</code></td>
   <td style="vertical-align:top;">
     Füge einen neuen Eintrag am Ende der Liste hinzu.
   </td>
 </tr>
 <tr><td class="hline" colspan="2"></td></tr>
 <tr>
-  <td><code class="scratch">(Element (3) von [Einkaufsliste v])</code></td>
+  <td><code class="scratch">(Element (3) von [Vokabeln v])</code></td>
   <td style="vertical-align:top;">
     Lies das dritte Element von der Liste.
   </td>
 </tr>
 <tr><td class="hline" colspan="2"></td></tr>
 <tr>
-  <td><code class="scratch">lösche (4) aus [Einkaufsliste v]</code></td>
+  <td><code class="scratch">(Länge von [Vokabeln v])</code></td>
+  <td style="vertical-align:top;">
+    Dieser Befehl ermittelt die Anzahl der Listeneinträge.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">lösche (4) aus [Vokabeln v]</code></td>
   <td style="vertical-align:top;">
     Lösche den vierten Listeneintrag.
   </td>
 </tr>
 <tr><td class="hline" colspan="2"></td></tr>
 <tr>
-  <td><code class="scratch">lösche alles aus [Einkaufsliste v]</code></td>
+  <td><code class="scratch">lösche alles aus [Vokabeln v]</code></td>
   <td style="vertical-align:top;">
       Mit diesem Befehl werden alle Listeneinträge gelöscht.
   </td>
 </tr>
 </table>
 <p class="caption">
-  Tab. 3 – Grundlegende Listenbefehle
+  Tab. 1 – Grundlegende Listenbefehle
 </p>
 
 
-
-
-
-
 <p>
-  Nun benötigen wir noch zwei weitere Listen. Die Liste  <em>Fragen</em> wird später dann die deutschen Wörter und die Liste <em>Antworten</em> die Übersetzungen enthalten. Die beiden Listen sind nötig,  damit anschliessend alle Wörter nur einmal und in zufälliger Reihenfolge abgefragt werden können. Übernimm nun den Programmcode von Prog. 1.
+Scratch kann nur immer ein Listeneintrag aufs mal lesen. Wenn man alle Einträge ausgeben möchte,  muss man sich etwas einfallen lassen, siehe Prog. 1. Der Trick ist, dass man eine Zählvariable i verwendet, welche am Anfang auf 1 gesetzt wird und dann schrittweise hochgezählt wird bis man alle Einträge ausgegeben hat.
 </p>
 
 
 <pre class="scratch">
 Wenn die grüne Flagge angeklickt
-  setze [Sprache v] auf [Französisch]
-  setze Sprache auf (Sprache) :: tts
-  ändere die Stimme zu (Alt v) :: tts
-  lösche alles aus [Fragen v]
-  lösche alles aus [Antworten v]
+  setze [i v] auf [1]
+  wiederhole bis < (i) > (Länge von [Vokabeln v]) >
+    sage (Element (i) von [Vokabeln v]) für (1) Sekunden
+    ändere [i v] um (1)
+  ende
 </pre>
 <p class="caption">
-    Prog. 1 – Initialisierung
+    Prog. 1 – Gibt alle Elemente der Vokabelliste aus.
 </p>
 
 
+<h3 class="question">
+Aufgabe <span class="nr"></span>
+</h3>
+<p>
+Passe Prog. 1 so an, dass
+</p>
+
+
+<ol class="subquestion">
+  <li>
+    alle Einträge ausser der Erste ausgegeben werden.
+  </li>
+  <li>
+    alle Einträge ausser der Letze ausgegeben werden.
+  </li>
+  <li>
+    immer nur jeder zweite Eintrag ausgegeben wird.
+  </li>
+  <li>
+    die Liste in umgekehrter Reihenfolge ausgegeben wird.
+  </li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+<hr class="seperator" />
+
+<h2>
+  Abfrageliste
+</h2>
 
 
 <p>
+  Wenn man Wörtchen lernt, möchte man nicht mehrmals hintereinander das gleiche Wort gefragt werden.
+  Das Programm soll sich merken, welche Wörtchen schon erfolreich abgefragt wurden.
+</p>
+<p>
+  Es gibt verschiedene Möglichkeiten  um das zu programmieren. Eine Möglichkeit ist mit einer zusätzlichen Liste, wir nennen sie &laquo;Abfrageliste&raquo;.
+</p>
+<p>
+  Die Abfrageliste enthält die Nummern den Vokabeln, die noch abgefragt werden müssen. Wenn die Vokabelnliste fünf Einträge hat, ist die Abfrageliste zu Beginn {1,2,3,4,5}. Angenommen, man hat das zweite Wörtchen gewusst, wird dieser Eintrag aus der Abfrageliste gelöscht, d.h. sie lautet nun {1,3,4,5}. Das geht so weiter, bis es in der Abfrageliste keine Einträge mehr hat. Dann ist man mit dem Lernen fertig. Die Abfrageliste wird von Prog. 2 erzeugt.
+</p>
 
+
+
+<pre class="scratch">
+  Wenn die grüne Flagge angeklickt
+  lösche alles aus [Abfrage v]
+  setze [i v] auf [1]
+  wiederhole bis < (i) > (Länge von [Vokabeln v]) >
+    füge (i) zu [Abfrage v] hinzu
+    ändere [i v] um (1)
+  ende
+</pre>
+<p class="caption">
+    Prog. 2 – Abfrageliste erstellen.
 </p>
 
 
 
 
+
+<hr class="seperator" />
+
+<h2>
+  Dolmetscher
+</h2>
+
+
+<p>
+Scratch kann Texte in verschiedene Sprachen übersetzen. Genau genommen kann Scratch den Text nicht direkt Text übersetzen, sondern es sendet ihn an Google. Es ist dann <a href="https://translate.google.com/?hl=de" target="_blank">Google Translate</a>, welches den Text übersetzt und wieder an Scratch zurücksendet. Du brauchst dazu eine Internetverbindung sonst funktioniert es nicht, siehe Prog. 3.
+</p>
+
+
+<pre class="scratch">
+Wenn die grüne Flagge angeklickt
+  sage (übersetze [Guten Tag Frau Meier.] nach (Französisch v) :: translate)
+</pre>
+<p class="caption">
+    Prog. 3 – Scratch kann einen Text übersetzen.
+</p>
+
+
+<h3 class="question">
+Aufgabe <span class="nr"></span>
+</h3>
+<p>
+Übersetze die fremdsprachigen Texte ins Deutsche.
+</p>
+
+
+<ol class="subquestion">
+  <li>
+    Hvis du forstår denne tekst, (Niederländisch)
+  </li>
+  <li>
+    sitten tiedät nyt (Finnisch)
+  </li>
+  <li>
+    πώς να μεταφράσετε ένα κείμενο. (Griechisch)
+  </li>
+  <li>
+    Nui, ehara? (Maori)
+  </li>
+</ol>
+
+
+
+
+<hr class="seperator" />
+
+<h2>
+  Sprachausgabe
+</h2>
+
+<p>
+Scratch kann dir einen Text vorlesen. Wie beim Übersetzen, verwendet Scratch einen Internetdienst um den Text in eine Sprachausgabe zu verwandeln. Es wird ein Dienst von Amazon verwendet.
+</p>
 
 <table align="left" cellspacing="10" cellpadding="0" border="0">
 <tr>
@@ -150,64 +276,105 @@ Wenn die grüne Flagge angeklickt
       Die Sprachausgabe spricht den Text mit der festgelegten Stimme und in der festgelegten Sprache.
   </td>
 </tr>
-<tr><td class="hline" colspan="2"></td></tr>
-<tr>
-  <td colspan="2" style="padding-top:2em;">
-    <pre class="scratch small">
-        übersetze [der Mann] nach (Französisch v) :: translate
-    </pre>
-  </td>
-</tr>
-</tr>
-  <td colspan="2" style="padding-top:2em;">
-    Der angegebene Text wird in eine andere Sprache übersetzt.
-  </td>
-</tr>
 </table>
 <p class="caption">
-  Tab. 3 – Sprachausgabe und Übersetzung
+  Tab. 2 – Befehle zur Steuerung der Sprachausgabe
 </p>
 
 
 
 
 
-
-
-
-
-
 <pre class="scratch">
-. . . :: #B7B7B7
-setze [i v] auf [1]
-wiederhole ( Länge von [Vokabeln v]) mal
-  füge (Element (i) von [Vokabeln v]) zu [Fragen v] hinzu
-  füge (übersetze (Element (i) von [Vokabeln v]) nach Sprache :: translate) zu [Antworten v] hinzu
-  ändere [i v] um (1)
-ende
+Wenn die grüne Flagge angeklickt
+  setze Sprache auf (Deutsch v) :: tts
+  ändere die Stimme zu (Alt v) :: tts
+  sage [Wie spät ist es?] :: tts
+
+
 </pre>
 <p class="caption">
-    Prog. 2 –  Fülle die Fragen und Antwort Listen mit Inhalten
+    Prog. 4 – Sprachausgabe
 </p>
 
 
+<h3 class="question">
+Aufgabe <span class="nr"></span>
+</h3>
+
+<ol class="subquestion">
+  <li>
+    Ändere die Stimme von Alt zu Tenor. Probiere auch die anderen Stimmen aus.
+  </li>
+  <li>
+    Wie klingt es, wenn ein Franzose &raquo;Wie spät ist es?&laquo; auf Deutsch sagt?
+  </li>
+  <li>
+    Verwende den Übersetzen-Befehl um  &raquo;Wie spät ist es?&laquo; auf Französisch zu übersetzen. Lass dann einmal die französische Stimme den Satz aussprechen und anschliessend die Deutsche.
+  </li>
+</ol>
+
+
+
+
+
+
+
+<hr class="seperator" />
+
+<h2>
+  Vocitrainer
+</h2>
+
+
+<p>
+Nun basteln wir unser Vocilernprogramm. Zuerst initialisieren wir die Sprachausgabe und die Abfrageliste, siehe Prog. 5.
+</p>
 
 
 <pre class="scratch">
-. . . :: #B7B7B7
+  Wenn die grüne Flagge angeklickt
+  setze [Sprache v] auf [Französisch]
+  setze Sprache auf (Sprache) :: tts
+  ändere die Stimme zu (Alt v) :: tts
+  lösche alles aus [Abfrage v]
+  setze [i v] auf [1]
+  wiederhole bis < (i) > (Länge von [Vokabeln v]) >
+    füge (i) zu [Abfrage v] hinzu
+    ändere [i v] um (1)
+  ende
+</pre>
+
+<p class="caption">
+    Prog. 5 – Initialisierung
+</p>
+
+
+<p>
+Nun kommt das Abfrageprogramm.
+</p>
+
+
+<pre class="scratch">
+Prog. 5 :: #B7B7B7
 sage (verbinde [Was heisst auf ] und (Sprache)) für (2) Sekunden
-wiederhole bis < (Länge von [Antworten v]) = (0) >
-setze [i v] auf (Zufallszahl von (1) bis (Länge von [Antworten v]))
-sage (Element (i) von [Fragen v])
-sage (Element (i) von [Antworten v]) :: tts
-lösche (i) aus [Fragen v]
-lösche (i) aus [Antworten v]
+wiederhole bis < ( Länge von [Abfrage v]) = (0) >
+  setze [i v] auf (Zufallszahl von (1) bis (Länge von [Abfrage v]))
+  setze [Frage v] auf  (Element (Element (i) von [Abfrage v]) von [Vokabeln v])
+  setze [Antwort v] auf  (übersetze (Frage) nach (Sprache) :: translate)
+  sage (Frage)
+  warte bis < Taste (Leertaste v) gedrückt? >
+  sage (Antwort :: variables)
+  sage (Antwort :: variables) :: tts
+  lösche (i) aus [Abfrage v]
 ende
+setze [Antwort v] auf (übersetze [Gut gemacht. Bravo!] nach (Sprache) :: translate)
+sage (Antwort :: variables)
+sage (Antwort :: variables) :: tts
 </pre>
 <p class="caption">
-    Prog. 3 –  Frage die Vokabeln in zufälliger Reihenfolge ab.
+    Prog. 6 –  Fülle die Fragen und Antwort Listen mit Inhalten
 </p>
-
 
 
 
