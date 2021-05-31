@@ -174,13 +174,13 @@ Passe Prog. 1 so an, dass
 
 <p>
   Wenn man Wörtchen lernt, möchte man nicht mehrmals hintereinander das gleiche Wort gefragt werden.
-  Das Programm soll sich merken, welche Wörtchen schon erfolreich abgefragt wurden.
+  Das Programm soll sich merken, welche Wörtchen schon abgefragt wurden.
 </p>
 <p>
-  Es gibt verschiedene Möglichkeiten  um das zu programmieren. Eine Möglichkeit ist mit einer zusätzlichen Liste, wir nennen sie &laquo;Abfrageliste&raquo;.
+  Es gibt verschiedene Möglichkeiten um das zu programmieren. Eine Möglichkeit ist mit einer zusätzlichen Liste, wir nennen sie &laquo;Abfrageliste&raquo;.
 </p>
 <p>
-  Die Abfrageliste enthält die Nummern den Vokabeln, die noch abgefragt werden müssen. Wenn die Vokabelnliste fünf Einträge hat, ist die Abfrageliste zu Beginn {1,2,3,4,5}. Angenommen, man hat das zweite Wörtchen gewusst, wird dieser Eintrag aus der Abfrageliste gelöscht, d.h. sie lautet nun {1,3,4,5}. Das geht so weiter, bis es in der Abfrageliste keine Einträge mehr hat. Dann ist man mit dem Lernen fertig. Die Abfrageliste wird von Prog. 2 erzeugt.
+  Die Abfrageliste enthält die Nummern den Vokabeln, die noch abgefragt werden müssen. Wenn die Vokabelliste fünf Einträge hat, ist die Abfrageliste zu Beginn {1,2,3,4,5}. Wird jetzt zum Beispiel das zweite Wörtchen abgefragt, dann wird der Eintrag mit dem Wert 2 aus der Liste gelöscht, d.h. sie lautet nun {1,3,4,5}. Das geht so weiter, bis es in der Abfrageliste keine Einträge mehr hat. Dann ist man mit dem Lernen fertig. Die Abfrageliste wird von Prog. 2 erzeugt.
 </p>
 
 
@@ -355,7 +355,7 @@ Nun basteln wir unser Vocilernprogramm. Zuerst initialisieren wir die Sprachausg
 
 
 <p>
-Nun kommt das Abfrageprogramm.
+Nun kommt der eigentliche Vocitrainer. Es werden so lange Wörtchen abgefragt, bis es keine Einträge mehr in der Abfrageliste hat. Es wird ein zufälliger Eintrag aus der Abfrageliste ausgewählt. Dieser Eintrag enhält die Position des Wörtchens in der Vokabelliste. Das Wörtchen wird aus der Liste ausgelesen und in der Variable <b class="variablen">Frage</b> gespeichert. Die Übersetzung wird in der Variable <b class="variablen">Antwort</b> gespeichert. Dann wird die Frage angezeigt und gewartet, bis der/die Benutzer/-in die Leertaste drückt. Es wird die Antwort angezeigt und gleichzeitig über die Sprachausgabe vorgelesen. Dann wird der Eintrag aus der Liste Abfrage gelöscht. Wenn alle Wörtchen abgefragt wurden, sagt Scratch in der Fremdsprache &laquo;Gut gemacht. Bravo!&raquo;.
 </p>
 
 
@@ -377,17 +377,23 @@ sage (Antwort :: variables)
 sage (Antwort :: variables) :: tts
 </pre>
 <p class="caption">
-    Prog. 6 –  Fülle die Fragen und Antwort Listen mit Inhalten
+    Prog. 6 –  Abfrageschleife
 </p>
 
 
 
+<p>
+Übernimm nun das Programm und teste es. Hoffentlich kann es dir helfen dass du dir die Vokabeln besser merken kannst. Wenn man ein Wort liest und hört, bleibt es besser im Gedächnis als wenn man es nur liest.
+</p>
 
 
 
-
-
-
+<p style="text-align:center;">
+  <span style="font-size:300%;">👩🏻‍🎓🧑🏽‍🎓</span>
+</p>
+<p style="text-align:center;">
+  Viel Erfolg bei Lernen.
+</p>
 
 
 
