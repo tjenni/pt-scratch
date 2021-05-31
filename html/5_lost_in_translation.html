@@ -43,6 +43,134 @@ Lost in Translation
 
 
 
+
+<hr class="seperator" />
+
+<h2>
+  Dolmetscher
+</h2>
+
+
+<p>
+Scratch kann Texte in verschiedene Sprachen übersetzen. Genau genommen kann Scratch den Text nicht direkt Text übersetzen, sondern es sendet ihn an Google. Es ist dann <a href="https://translate.google.com/?hl=de" target="_blank">Google Translate</a>, welches den Text übersetzt und wieder an Scratch zurücksendet. Du brauchst dazu eine Internetverbindung sonst funktioniert es nicht, siehe Prog. 3.
+</p>
+
+
+<pre class="scratch">
+Wenn die grüne Flagge angeklickt
+  sage (übersetze [Guten Tag Frau Meier.] nach (Französisch v) :: translate)
+</pre>
+<p class="caption">
+    Prog. 3 – Scratch kann einen Text übersetzen.
+</p>
+
+
+<h3 class="question">
+Aufgabe <span class="nr"></span>
+</h3>
+<p>
+Übersetze die fremdsprachigen Texte ins Deutsche.
+</p>
+
+
+<ol class="subquestion">
+  <li>
+    Hvis du forstår denne tekst, (Niederländisch)
+  </li>
+  <li>
+    sitten tiedät nyt (Finnisch)
+  </li>
+  <li>
+    πώς να μεταφράσετε ένα κείμενο. (Griechisch)
+  </li>
+  <li>
+    Nui, ehara? (Maori)
+  </li>
+</ol>
+
+
+
+
+<hr class="seperator" />
+
+<h2>
+  Sprachausgabe
+</h2>
+
+<p>
+Scratch kann dir einen Text vorlesen. Wie beim Übersetzen, verwendet Scratch einen Internetdienst um den Text in eine Sprachausgabe zu verwandeln. Es wird ein Dienst von Amazon verwendet.
+</p>
+
+<table align="left" cellspacing="10" cellpadding="0" border="0">
+<tr>
+  <td><code class="scratch">setze Sprache auf (Französisch v) :: tts</code></td>
+  <td style="vertical-align:top;">
+    Lege die Sprache für die Sprachausgabe fest.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">ändere die Stimme zu (Alt v) :: tts</code></td>
+  <td style="vertical-align:top;">
+    Lege die Stimme für die Sprachausgabe fest.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td><code class="scratch">sage [la femme] :: tts</code></td>
+  <td style="vertical-align:top;">
+      Die Sprachausgabe spricht den Text mit der festgelegten Stimme und in der festgelegten Sprache.
+  </td>
+</tr>
+</table>
+<p class="caption">
+  Tab. 2 – Befehle zur Steuerung der Sprachausgabe
+</p>
+
+
+
+
+
+<pre class="scratch">
+Wenn die grüne Flagge angeklickt
+  setze Sprache auf (Deutsch v) :: tts
+  ändere die Stimme zu (Alt v) :: tts
+  sage [Wie spät ist es?] :: tts
+
+
+</pre>
+<p class="caption">
+    Prog. 4 – Sprachausgabe
+</p>
+
+
+<h3 class="question">
+Aufgabe <span class="nr"></span>
+</h3>
+
+<ol class="subquestion">
+  <li>
+    Ändere die Stimme von Alt zu Tenor. Probiere auch die anderen Stimmen aus.
+  </li>
+  <li>
+    Wie klingt es, wenn ein Franzose &laquo;Wie spät ist es?&raquo; auf Deutsch sagt?
+  </li>
+  <li>
+    Verwende den Übersetzen-Befehl um  &laquo;Wie spät ist es?&raquo; auf Französisch zu übersetzen. Lass dann einmal die französische Stimme den Satz aussprechen und anschliessend die Deutsche.
+  </li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
 <hr class="seperator" />
 
 <h2>
@@ -50,7 +178,7 @@ Lost in Translation
 </h2>
 
 <p>
-  Zuerst benötigen wir eine Liste welche die Vokabeln enthält. Es gibt in Scratch die Möglichkeit eigene Listen anzulegen. Gehe dazu auf <b class="variablen">Variablen</b> und erstelle eine  <b class="variablen">Neue Liste</b> mit dem Namen <em>Vokabeln</em>. Fülle die Liste dann mit ein paar deutschen Wörter, siehe Video 1.
+  Für den Vocitrainer benötigen wir eine Liste welche die Vokabeln enthält. Es gibt in Scratch die Möglichkeit eigene Listen anzulegen. Gehe dazu auf <b class="variablen">Variablen</b> und erstelle eine  <b class="variablen">Neue Liste</b> mit dem Namen <em>Vokabeln</em>. Fülle die Liste dann mit ein paar deutschen Wörter, siehe Video 1.
 </p>
 
 <!-- Grösse Chromefenster 1060 x 730 -->
@@ -180,7 +308,7 @@ Passe Prog. 1 so an, dass
   Es gibt verschiedene Möglichkeiten um das zu programmieren. Eine Möglichkeit ist mit einer zusätzlichen Liste, wir nennen sie &laquo;Abfrageliste&raquo;.
 </p>
 <p>
-  Die Abfrageliste enthält die Nummern den Vokabeln, die noch abgefragt werden müssen. Wenn die Vokabelliste fünf Einträge hat, ist die Abfrageliste zu Beginn {1,2,3,4,5}. Wird jetzt zum Beispiel das zweite Wörtchen abgefragt, dann wird der Eintrag mit dem Wert 2 aus der Liste gelöscht, d.h. sie lautet nun {1,3,4,5}. Das geht so weiter, bis es in der Abfrageliste keine Einträge mehr hat. Dann ist man mit dem Lernen fertig. Die Abfrageliste wird von Prog. 2 erzeugt.
+  Die Abfrageliste enthält die Nummern den Vokabeln, die noch abgefragt werden müssen. Wenn die Vokabelliste fünf Einträge hat, ist die Abfrageliste zu Beginn [1,2,3,4,5]. Wird jetzt zum Beispiel das zweite Wörtchen abgefragt, dann wird der Eintrag mit dem Wert 2 aus der Liste gelöscht, d.h. sie lautet nun [1,3,4,5]. Das geht so weiter, bis es in der Abfrageliste keine Einträge mehr hat. Dann ist man mit dem Lernen fertig. Die Abfrageliste wird von Prog. 2 erzeugt.
 </p>
 
 
@@ -199,125 +327,13 @@ Passe Prog. 1 so an, dass
 </p>
 
 
-
-
-
-<hr class="seperator" />
-
-<h2>
-  Dolmetscher
-</h2>
-
-
-<p>
-Scratch kann Texte in verschiedene Sprachen übersetzen. Genau genommen kann Scratch den Text nicht direkt Text übersetzen, sondern es sendet ihn an Google. Es ist dann <a href="https://translate.google.com/?hl=de" target="_blank">Google Translate</a>, welches den Text übersetzt und wieder an Scratch zurücksendet. Du brauchst dazu eine Internetverbindung sonst funktioniert es nicht, siehe Prog. 3.
-</p>
-
-
-<pre class="scratch">
-Wenn die grüne Flagge angeklickt
-  sage (übersetze [Guten Tag Frau Meier.] nach (Französisch v) :: translate)
-</pre>
-<p class="caption">
-    Prog. 3 – Scratch kann einen Text übersetzen.
-</p>
-
-
-<h3 class="question">
-Aufgabe <span class="nr"></span>
-</h3>
-<p>
-Übersetze die fremdsprachigen Texte ins Deutsche.
-</p>
-
-
-<ol class="subquestion">
-  <li>
-    Hvis du forstår denne tekst, (Niederländisch)
-  </li>
-  <li>
-    sitten tiedät nyt (Finnisch)
-  </li>
-  <li>
-    πώς να μεταφράσετε ένα κείμενο. (Griechisch)
-  </li>
-  <li>
-    Nui, ehara? (Maori)
-  </li>
-</ol>
-
-
-
-
-<hr class="seperator" />
-
-<h2>
-  Sprachausgabe
-</h2>
-
-<p>
-Scratch kann dir einen Text vorlesen. Wie beim Übersetzen, verwendet Scratch einen Internetdienst um den Text in eine Sprachausgabe zu verwandeln. Es wird ein Dienst von Amazon verwendet.
-</p>
-
-<table align="left" cellspacing="10" cellpadding="0" border="0">
-<tr>
-  <td><code class="scratch">setze Sprache auf (Französisch v) :: tts</code></td>
-  <td style="vertical-align:top;">
-    Lege die Sprache für die Sprachausgabe fest.
-  </td>
-</tr>
-<tr><td class="hline" colspan="2"></td></tr>
-<tr>
-  <td><code class="scratch">ändere die Stimme zu (Alt v) :: tts</code></td>
-  <td style="vertical-align:top;">
-    Lege die Stimme für die Sprachausgabe fest.
-  </td>
-</tr>
-<tr><td class="hline" colspan="2"></td></tr>
-<tr>
-  <td><code class="scratch">sage [la femme] :: tts</code></td>
-  <td style="vertical-align:top;">
-      Die Sprachausgabe spricht den Text mit der festgelegten Stimme und in der festgelegten Sprache.
-  </td>
-</tr>
-</table>
-<p class="caption">
-  Tab. 2 – Befehle zur Steuerung der Sprachausgabe
-</p>
-
-
-
-
-
-<pre class="scratch">
-Wenn die grüne Flagge angeklickt
-  setze Sprache auf (Deutsch v) :: tts
-  ändere die Stimme zu (Alt v) :: tts
-  sage [Wie spät ist es?] :: tts
-
-
-</pre>
-<p class="caption">
-    Prog. 4 – Sprachausgabe
-</p>
-
-
 <h3 class="question">
 Aufgabe <span class="nr"></span>
 </h3>
 
-<ol class="subquestion">
-  <li>
-    Ändere die Stimme von Alt zu Tenor. Probiere auch die anderen Stimmen aus.
-  </li>
-  <li>
-    Wie klingt es, wenn ein Franzose &laquo;Wie spät ist es?&raquo; auf Deutsch sagt?
-  </li>
-  <li>
-    Verwende den Übersetzen-Befehl um  &laquo;Wie spät ist es?&raquo; auf Französisch zu übersetzen. Lass dann einmal die französische Stimme den Satz aussprechen und anschliessend die Deutsche.
-  </li>
-</ol>
-
+<p>
+Überprüfe, ob Prog. 2 funktioniert. Wenn du zum Beispiel 6 Wörtchen in der Vokabelnliste hast sollte die Abfrageliste nachher [1,2,3,4,5,6] enthalten.
+</p>
 
 
 
@@ -332,7 +348,7 @@ Aufgabe <span class="nr"></span>
 
 
 <p>
-Nun basteln wir unser Vocilernprogramm. Zuerst initialisieren wir die Sprachausgabe und die Abfrageliste, siehe Prog. 5.
+Nun basteln wir unser Vocitrainer zusammen. Zuerst initialisieren wir die Sprachausgabe und die Abfrageliste, siehe Prog. 5.
 </p>
 
 
@@ -355,7 +371,7 @@ Nun basteln wir unser Vocilernprogramm. Zuerst initialisieren wir die Sprachausg
 
 
 <p>
-Nun kommt der eigentliche Vocitrainer. Es werden so lange Wörtchen abgefragt, bis es keine Einträge mehr in der Abfrageliste hat. Es wird ein zufälliger Eintrag aus der Abfrageliste ausgewählt. Dieser Eintrag enhält die Position des Wörtchens in der Vokabelliste. Das Wörtchen wird aus der Liste ausgelesen und in der Variable <b class="variablen">Frage</b> gespeichert. Die Übersetzung wird in der Variable <b class="variablen">Antwort</b> gespeichert. Dann wird die Frage angezeigt und gewartet, bis der/die Benutzer/-in die Leertaste drückt. Es wird die Antwort angezeigt und gleichzeitig über die Sprachausgabe vorgelesen. Dann wird der Eintrag aus der Liste Abfrage gelöscht. Wenn alle Wörtchen abgefragt wurden, sagt Scratch in der Fremdsprache &laquo;Gut gemacht. Bravo!&raquo;.
+Nun kommt der eigentliche Vocitrainer, siehe Prog. 6. Die <b class="steuerung">wiederhole bis</b>-Schleife  wird solange ausgeführt, bis es keine Einträge mehr in der Abfrageliste hat. In der Schleife wird zuerst ein zufälliger Eintrag aus der Abfrageliste ausgewählt. Dieser Eintrag enthält die Position des Wörtchens in der Vokabelliste. Das Wörtchen wird aus der Liste ausgelesen und in der Variable <b class="variablen">Frage</b> gespeichert. Die Übersetzung wird in der Variable <b class="variablen">Antwort</b> gespeichert. Dann wird die Frage angezeigt und gewartet, bis der/die Benutzer/-in die Leertaste drückt. Es wird die Antwort angezeigt und gleichzeitig über die Sprachausgabe vorgelesen. Dann wird der Eintrag aus der Liste Abfrage gelöscht. Wenn alle Wörtchen abgefragt wurden, sagt Scratch in der Fremdsprache &laquo;Gut gemacht. Bravo!&raquo;.
 </p>
 
 
