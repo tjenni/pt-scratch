@@ -66,6 +66,7 @@
   Die Katze soll immerzu dem Mauszeiger folgen. Dazu richtet sie sich immerzu auf ihn aus und läuft auf ihn zu, wenn er mehr als 5 Schritte entfernt ist. Übernimm für die Katze den Code von Prog. 1. Wenn du Mühe hast die Befehle zu finden, schau dir das Video 2 an.
 </p>
 
+
 <pre class="scratch">
 Wenn die grüne Flagge angeklickt
 gehe zu x:(0) y:(0)
@@ -85,13 +86,6 @@ stoppe [alles v]
 </p>
 
 
-<!-- Grösse Chromefenster 1060 x 730 -->
-<p class="video">
-    <video width="800" controls="true"><source src="katz_und_maus/katze_programm.mov">katz_und_maus/katze_programm.mov</video>
-</p>
-<p class="caption">
-    Video 2 – Das Katzenprogramm erstellen  (Video: T. Jenni)
-</p>
 
 
 <p>
@@ -199,6 +193,14 @@ stoppe [alles v]
 </tr>
 </table>
 
+<!-- Grösse Chromefenster 1060 x 730 -->
+<p class="video">
+    <video width="800" controls="true"><source src="katz_und_maus/katze_programm.mov">katz_und_maus/katze_programm.mov</video>
+</p>
+<p class="caption">
+    Video 2 – Das Katzenprogramm erstellen  (Video: T. Jenni)
+</p>
+
 
 
 
@@ -217,7 +219,13 @@ stoppe [alles v]
 Weiter geht es mit der Maus. Füge die Mausfigur (Mouse1) hinzu und setze ihre Grösse auch auf 50 %. Übernimm anschliessend für sie Prog. 2. Achtung! Der Befehl <b class="variablen">setze Punkte auf 0</b> bezieht sich auf eine Variable. Eine Variable kann man sich wie ein Notizzettel vorstellen auf den man eine einzige Zahl notieren kann. Der Name der Variable verrät ihren Zweck. Es handelt sich um den Punktestand, welcher der Spieler während des Spiels hat. Im Video 3 wird gezeigt, wie man eine Variable erstellen kann. In Video 4 siehst du wie man das Mausprogramm zusammenstellt.
 </p>
 
-
+<!-- Grösse Chromefenster 1060 x 730 -->
+<p class="video">
+    <video width="800" controls="true"><source src="katz_und_maus/variable_erstellen.mov">katz_und_maus/variable_erstellen.mov</video>
+</p>
+<p class="caption">
+    Video 3 – Eine neue Variable erstellen  (Video: T. Jenni)
+</p>
 
 
 <pre class="scratch">
@@ -239,6 +247,108 @@ ende
     Prog. 2 – Programm für die Maus
 </p>
 
+
+
+
+
+
+<p>
+  Das Mausprogramm lesen wir ebenfalls gemeinsam durch. Befehle die beim Katzenprogramm schon besprochen wurden werden ausgelassen.
+</p>
+
+<table border="0" cellpadding="10" cellspacing="0">
+<tr>
+  <td>
+    <code class="scratch">setze [Punkte v] auf (0)</code>
+  </td>
+  <td>
+      Die Variable Punkte wird auf den Wert 0 zurückgesetzt.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td>
+    <code class="scratch">wiederhole fortlaufend</code>
+  </td>
+  <td>
+      Wiederhole alle Befehle, die sich in diesem Zangenbefehl befinden, immerzu ohne Ende.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td>
+    <code class="scratch">gehe zu (Zufallsposition v)</code>
+  </td>
+  <td>
+      Die Maus wir an eine zufällige Position verschoben.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td colspan="2" style="padding-top:2em;">
+    <pre class="scratch small">
+      setze Richtung auf (Zufallszahl von (0) bis (360)) Grad
+    </pre>
+  </td>
+</tr>
+</tr>
+  <td colspan="2" style="padding-top:2em;">
+    Die Maus wird in eine zufällige Richtung gedreht.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td colspan="2" style="padding-top:2em;">
+    <pre class="scratch small">
+      warte bis < wird [Katze v] berührt? >
+    </pre>
+  </td>
+</tr>
+</tr>
+  <td colspan="2" style="padding-top:2em;">
+    Das Mausprogramm pausiert so lange, bis die Katze die Maus &laquo;berührt&raquo;, d.h. frisst.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td>
+    <code class="scratch">
+        ändere [Punkte v] um (1)
+    </code>
+  </td>
+  <td>
+    Die Katz hat die Maus gefangen. Das gibt einen Punkt. Die Variable <b class="variablen">Punkte</b> wird um eins erhöht.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td>
+    <code class="scratch">
+        spiele Klang [Bite v] ganz
+    </code>
+  </td>
+  <td>
+    Spiele einen Beissklang ab um das Fressen auch akustisch zu unterstreichen.
+  </td>
+</tr>
+<tr><td class="hline" colspan="2"></td></tr>
+<tr>
+  <td colspan="2" style="padding-top:2em;">
+    <pre class="scratch small">
+      warte (Zufallszahl von (0) bis (2)) Sekunden
+    </pre>
+  </td>
+</tr>
+</tr>
+  <td colspan="2" style="padding-top:2em;">
+    Das Mausprogramm wird zwischen 0 und 2 Sekunden pausiert.
+  </td>
+</tr>
+</table>
+
+
+
+
 <!-- Grösse Chromefenster 1060 x 730 -->
 <p class="video">
     <video width="800" controls="true"><source src="katz_und_maus/maus_programm.mov">katz_und_maus/maus_programm.mov</video>
@@ -248,28 +358,20 @@ ende
 </p>
 
 
-<p>
-  Das Mausprogramm lesen wir ebenfalls gemeinsam durch. Der erste Befehl lautet wie bei der Katze <b class="ereignisse">Wenn <b class="operatoren">grüne Flagge</b> angeklickt wird</b>. Der zweite Befehl erstellt setzt die Variable <b class="variablen">Punkte</b> auf 0.
-</p>
+
+
+
+
+
+
 
 <p>
-  Jetzt wird die Maus mit dem Befehl <b class="aussehen">verstecke dich</b> versteckt. Alle Befehle innerhalb des Zangenbefehls <b  class="steuerung">wiederhole fortlaufend</b> werden immerzu wiederholt.
-</p>
-
-<p>
-  Wir setzen die noch unsichtbare Maus an eine Zufallsposition und geben ihr eine Zufallsrichtung. Dann lassen wir die Maus mit <b class="aussehen">zeige dich</b> erscheinen.
-</p>
-
-<p>
-  Das Mausprogramm wird anschliessend pausiert, bis die Maus von der Katze berührt wird. Falls das der Fall ist, wird die Maus von der Katze gefangen. Die Maus wird versteckt und der Punktestand um 1 erhöht. Dazu erklingt der Ton "Bite". Guten Appetit!
-</p>
-
-<p>
-  Das Mausprogramm pausiert dann eine zufällige Anzahl von Sekunden bevor wieder die Maus wieder erscheint. Welchen Highscore kannst du erziehlen?
+  Wenn du alles richtig programmiert hast, kannst du nun das Spiel spielen.
+  Schlägst du den Highscore?
 </p>
 
 
-<p style="text-align:center;margin-top:4em;">
+<p style="text-align:center;margin-top:5em;">
   <span style="font-size:400%;">‍🥇🥈🥉</span>
 </p>
 
