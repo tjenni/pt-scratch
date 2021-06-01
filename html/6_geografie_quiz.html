@@ -3,7 +3,7 @@
 <html lang="de">
 <head>
   <meta charset="utf-8"/>
-  <title>Lost in Translation</title>
+  <title>Geografie Quiz</title>
 </head>
 
 <body>
@@ -21,33 +21,144 @@
 
 
 <h1>
-Geografie-Quiz
+Geografie Quiz
 </h1>
 
 <p style="text-align:center;">
-  <span style="font-size:300%;">🇫🇷 🇬🇧 🇮🇹 🇪🇸</span>
+  <span style="font-size:500%;">🌍</span>
 </p>
 
 <p>
-  In dieser Lektion werden wir ein Geografie-Quiz programmieren. Das Programm funktioniert so, dass verschiedene Länder angezeit werden sollen.
+  In dieser Lektion werden wir ein Geografie-Quiz programmieren. Lade dazu die Datei <a href="geografie_quiz/geografie-quiz_vorlage.sb3" target="_blank">geografie-quiz_vorlage.sb3</a> herunter. Du kannst sie auch von der Scratch-Webseite mit diesem <a href="https://scratch.mit.edu/projects/538621522" target="_blank">Link</a> öffnen.
 </p>
+
 
 <p>
-
+  In der Vorlage gibt es zwei Figuren, &laquo;Länder&raquo; und &laquo;Ruby&raquo;. Die Figur &laquo;Länder&raquo; hat elf Kostüme, 10 Länder und eine Europakarte. Falls du selber weitere Länder einfügen möchtest, kannst du das mit Hilfe der Europakarte machen. Wie das geht wird in Video 1 gezeigt. Die Figur &laquo;Ruby&raquo; wird dich während dem Quiz abfragen.
 </p>
-
-<p>
-  Öffne ein neues Scratch-Projekt und lade die Erweiterungen &laquo;Text zu Sprache&raquo; und &laquo;Übersetzung&raquo;.
-</p>
-
 
 
 
 <hr class="seperator" />
 
 <h2>
-  Dolmetscher
+  Länderliste erstellen
 </h2>
+
+
+<p>
+  Wenn man das Programm startet, wird zuerst eine Liste <b class="variablen">Länder</b> mit den Ländernamen erstellt. Glücklicherweise sind die Kostüme der Figur <b class="variablen">Länder</b> bereits mit den richtigen Ländernamen versehen. Wir gehen also durch alle Kostüme durch und fügen die Kostümnamen zu der Länderliste hinzu. Probiere zuerst selber ein Programm zu schreiben.
+</p>
+
+
+<script>
+function showCode(that){
+  if(confirm("Bist du sicher, dass du es schon probiert hast?")){
+    that.style.filter = "blur(0)";
+  }
+}
+</script>
+
+<pre class="scratch" style="filter: blur(10px);" onclick="showCode(this)">
+Wenn die grüne Flagge angeklickt
+verstecke dich
+lösche alles aus [Länder v]
+setze [i v] auf (1)
+wechsle zu Kostüm (Europa v)
+setze [n v] auf ( (Kostüm [Nummer v]) - (1))
+wiederhole bis < (i) > (n) >
+  wechsle zu Kostüm (i)
+  füge (Kostüm [Name v]) zu [Länder v] hinzu
+  ändere [i v] um (1)
+ende
+</pre>
+<p class="caption">
+    Prog. 1 – Länderliste erstellen
+</p>
+
+<p>
+  Überprüfe dieses Programm. Es sollten alle Ländernamen ausser &laquo;Europa&raquo; zur Liste hinzugefügt werden.
+</p>
+
+
+<hr class="seperator" />
+
+<h2>
+  Länder abfragen
+</h2>
+
+<pre class="scratch">
+Prog. 1 :: #B7B7B7
+wiederhole bis < (Länge von [Länder v]) = (0) >
+  setze [i v] auf (Zufallszahl von (1) bis (Länge von [Länder v]))
+  setze [Land v] auf (Element (i) von [Länder v])
+  wechsle zu Kostüm (Land)
+  sende (sage Name v) an alle und warte
+  warte bis < Maustaste gedrückt ? >
+  zeige dich
+  falls < wird (Mauszeiger v) berührt? >, dann
+    lösche ( Nummer von (Land) in [Länder v] ) aus [Länder v]
+    sende ( sage richtig v ) an alle und warte
+  sonst
+    sende ( sage falsch v ) an alle und warte
+  ende
+  verstecke dich
+ende
+sende ( sage super gemacht v ) an alle und warte
+</pre>
+<p class="caption">
+    Prog. 1 – Länder abfragen.
+</p>
+
+
+<hr class="seperator" />
+
+<h2>
+  Weitere Länder hinzufügen
+</h2>
+
+
+
+
+
+
+<h3 class="question">
+Aufgabe <span class="nr"></span>
+</h3>
+<p>
+Implementiere folgende Erweiterungen.
+</p>
+
+
+<ol class="subquestion">
+  <li>
+    Füge weitere Länder hinzu.
+  </li>
+  <li>
+    Wenn man ein Land richtig gewusst hat, kriegt man einen Punkt. Hat man es falsch, wird ein Punkt abgezogen. Weniger als null Punkte kann man nicht haben.
+  </li>
+  <li>
+    Erstelle ein Quiz, bei welchem die Länder angezeigt werden und man dann den Ländernamen eingeben muss. Verwende dazu den Befehl<br />
+
+    <code class="scratch">frage [Wie heisst dieses Land?] und warte</code><br />
+
+    Dieser Befehl erlaubt es dem Benutzer einen Text einzugeben. Die Antwort wird in der folgenden Variable gespeichert. <br />
+
+    <code class="scratch">Antwort</code>
+
+  </li>
+</ol>
+
+
+
+
+<p style="text-align:center;margin-top:5em;">
+  <span style="font-size:300%;">👩🏻‍🎓🧑🏽‍🎓</span>
+</p>
+<p style="text-align:center;">
+  Viel Erfolg beim Lernen.
+</p>
+
 
 
 <hr class="footer">
