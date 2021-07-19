@@ -188,3 +188,9 @@ div.pt-book ol.subquestion > li:before {
     counter-increment: subquestion;
     margin-left: -1em;
 }
+
+
+
+div.pt-book table.centered td {
+  text-align:center;
+}
