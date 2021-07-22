@@ -122,6 +122,14 @@ div.pt-book .malstifte {
   color:#1AB582;
 }
 
+div.pt-book .true {
+  color:#1ab527;
+}
+
+div.pt-book .false {
+  color:#b51a1a;
+}
+
 
 
 
@@ -193,4 +201,9 @@ div.pt-book ol.subquestion > li:before {
 
 div.pt-book table.centered td {
   text-align:center;
+}
+
+div.pt-book .quote {
+  margin-left:2em;
+  text-align:left;
 }
