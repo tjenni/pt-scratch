@@ -63,13 +63,10 @@ function showCode(that){
 Wenn die grüne Flagge angeklickt
 verstecke dich
 lösche alles aus [Länder v]
-setze [i v] auf (1)
-wechsle zu Kostüm (Europa v)
-setze [n v] auf ( (Kostüm [Nummer v]) - (1))
-wiederhole bis < (i) > (n) >
-  wechsle zu Kostüm (i)
-  füge (Kostüm [Name v]) zu [Länder v] hinzu
-  ändere [i v] um (1)
+wechsle zu Kostüm (Albanien v)
+wiederhole bis < (Kostüm (Name v)) = [Europa] >
+  füge (Kostüm [Name v]) zu [Länder v] hinzu  
+  wechsle zum nächsten Kostüm
 ende
 </pre>
 <p class="caption">
@@ -91,13 +88,12 @@ ende
 Prog. 1 :: #B7B7B7
 wiederhole bis < (Länge von [Länder v]) = (0) >
   setze [i v] auf (Zufallszahl von (1) bis (Länge von [Länder v]))
-  setze [Land v] auf (Element (i) von [Länder v])
-  wechsle zu Kostüm (Land)
-  sende (sage Name v) an alle und warte
+  wechsle zu Kostüm (Element (i) von [Länder v])
+  sende (frage Land v) an alle und warte
   warte bis < Maustaste gedrückt ? >
   zeige dich
   falls < wird (Mauszeiger v) berührt? >, dann
-    lösche ( Nummer von (Land) in [Länder v] ) aus [Länder v]
+    lösche ( i ) aus [Länder v]
     sende ( sage richtig v ) an alle und warte
   sonst
     sende ( sage falsch v ) an alle und warte
